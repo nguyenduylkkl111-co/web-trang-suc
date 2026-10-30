@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600"><defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="70%">
+<stop offset="0%" stop-color="#fdfaf5"/><stop offset="70%" stop-color="#f1e9dd"/><stop offset="100%" stop-color="#e6dac8"/>
+</radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#f4f6f8"/><stop offset="45%" stop-color="#bcc1c8"/><stop offset="100%" stop-color="#7c828b"/>
+</linearGradient>
+<linearGradient id="metal2" x1="1" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#f4f6f8"/><stop offset="55%" stop-color="#bcc1c8"/><stop offset="100%" stop-color="#7c828b"/>
+</linearGradient>
+<linearGradient id="gem" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#ffffff"/><stop offset="50%" stop-color="#f2ece2"/><stop offset="100%" stop-color="#cbbca5"/>
+</linearGradient>
+<radialGradient id="pearl" cx="35%" cy="32%" r="70%">
+<stop offset="0%" stop-color="#ffffff"/><stop offset="60%" stop-color="#f1ebe0"/><stop offset="100%" stop-color="#cdbfa9"/>
+</radialGradient>
+<radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#bfae94" stop-opacity="0.45"/><stop offset="100%" stop-color="#bfae94" stop-opacity="0"/>
+</radialGradient>
+</defs><rect width="600" height="600" fill="url(#bg)"/><ellipse cx="300.0" cy="498.0" rx="180.0" ry="24.0" fill="url(#shadow)"/><line x1="205" y1="240" x2="205" y2="330" stroke="url(#metal2)" stroke-width="4"/><circle cx="205" cy="262" r="46" fill="url(#pearl)"/><line x1="395" y1="240" x2="395" y2="330" stroke="url(#metal2)" stroke-width="4"/><circle cx="395" cy="262" r="46" fill="url(#pearl)"/><path d="M470,187 L472.86,197.14 L483,200 L472.86,202.86 L470,213 L467.14,202.86 L457,200 L467.14,197.14 Z" fill="#ffffff" fill-opacity="0.9"/><path d="M130,371 L131.98,378.02 L139,380 L131.98,381.98 L130,389 L128.02,381.98 L121,380 L128.02,378.02 Z" fill="#ffffff" fill-opacity="0.9"/></svg>

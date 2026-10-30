@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Mẫu thành phần giao diện | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+<!-- Trang nội bộ, KHÔNG nộp như một chức năng -->
+
+<!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
+<div id="topbar">
+    <div class="container">
+        <div class="left">Miễn phí giao hàng toàn quốc<span class="sep">|</span>Hotline: 1900 6868</div>
+        <div class="right"><a href="../dang-nhap.html">Đăng nhập</a><span class="sep">|</span><a href="../dang-ky.html">Đăng ký</a></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div id="header">
+    <div class="container">
+        <div id="logo">
+            <a href="../index.html" title="Về trang chủ">
+                <span class="logo-name">AURELIA</span>
+                <span class="logo-sub">FINE JEWELRY</span>
+            </a>
+        </div>
+        <div id="search">
+            <form name="frmSearch" action="../tim-kiem.html" method="get">
+                <input type="text" name="q" class="input" value="" placeholder="Tìm theo tên sản phẩm..." />
+                <input type="submit" class="btn" value="Tìm" />
+                <a class="search-more" href="../tim-kiem-nang-cao.html">Tìm nâng cao</a>
+            </form>
+        </div>
+        <div id="cart">
+            <a href="../dang-nhap.html" title="Vui lòng đăng nhập để dùng giỏ hàng">Giỏ hàng <span class="count">0</span></a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div id="menu">
+    <div class="container">
+        <ul>
+            <li><a href="../index.html">Trang chủ</a></li>
+            <li><a href="../danh-muc/nhan.html">Nhẫn</a></li>
+            <li><a href="../danh-muc/day-chuyen.html">Dây chuyền</a></li>
+            <li><a href="../danh-muc/bong-tai.html">Bông tai</a></li>
+            <li><a href="../danh-muc/vong-tay.html">Vòng tay</a></li>
+            <li><a href="../tim-kiem-nang-cao.html">Tìm nâng cao</a></li>
+        </ul>
+    </div>
+</div>
+<!-- ============ HẾT HEADER ============ -->
+
+<div class="container">
+    <p class="breadcrumb"><a href="../index.html">Trang chủ</a> / Mẫu thành phần giao diện</p>
+    <h1 class="page-title">Mẫu thành phần giao diện</h1>
+    <div class="alert alert-info">Trang nội bộ cho nhóm: mỗi mục có <b>bản hiển thị</b> và <b>đoạn code để sao chép</b>.
+    Dùng đúng class có sẵn trong css/common.css và css/style.css để mọi trang trông đồng bộ.
+    Trang admin dùng thêm css/admin.css (xem admin/index.html).</div>
+
+    <div class="panel">
+        <h2>1. Nút bấm</h2>
+        <p class="muted mb-20">Dùng được cho thẻ &lt;a&gt; và &lt;input type="submit"&gt;.</p>
+<a class="btn" href="#">Nút chính</a>
+<a class="btn btn-outline" href="#">Nút viền</a>
+<a class="btn btn-gold" href="#">Đặt hàng</a>
+<a class="btn btn-danger" href="#">Xóa</a>
+<a class="btn btn-small" href="#">Nút nhỏ</a>
+<input type="submit" class="btn" value="Gửi form" />
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Nút chính&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline&quot; href=&quot;#&quot;&gt;Nút viền&lt;/a&gt;
+&lt;a class=&quot;btn btn-gold&quot; href=&quot;#&quot;&gt;Đặt hàng&lt;/a&gt;
+&lt;a class=&quot;btn btn-danger&quot; href=&quot;#&quot;&gt;Xóa&lt;/a&gt;
+&lt;a class=&quot;btn btn-small&quot; href=&quot;#&quot;&gt;Nút nhỏ&lt;/a&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn&quot; value=&quot;Gửi form&quot; /&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>2. Form trong khung (đăng nhập, đăng ký)</h2>
+        <p class="muted mb-20">Khung .form-box rộng 400px, ô nhập dùng class w-full.</p>
+<div class="form-box">
+    <h1>Đăng nhập</h1>
+    <p class="form-sub">Chào mừng bạn quay lại</p>
+    <form name="frmDemo" action="#" method="get">
+        <div class="form-row">
+            <label>Tên đăng nhập <span class="req">*</span></label>
+            <input type="text" name="username" class="input w-full" />
+        </div>
+        <div class="form-row">
+            <label>Mật khẩu <span class="req">*</span></label>
+            <input type="password" name="password" class="input w-full" />
+            <span class="hint">Tối thiểu 6 ký tự</span>
+        </div>
+        <input type="submit" class="btn btn-block" value="Đăng nhập" />
+    </form>
+</div>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;div class=&quot;form-box&quot;&gt;
+    &lt;h1&gt;Đăng nhập&lt;/h1&gt;
+    &lt;p class=&quot;form-sub&quot;&gt;Chào mừng bạn quay lại&lt;/p&gt;
+    &lt;form name=&quot;frmDemo&quot; action=&quot;#&quot; method=&quot;get&quot;&gt;
+        &lt;div class=&quot;form-row&quot;&gt;
+            &lt;label&gt;Tên đăng nhập &lt;span class=&quot;req&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;username&quot; class=&quot;input w-full&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-row&quot;&gt;
+            &lt;label&gt;Mật khẩu &lt;span class=&quot;req&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;input type=&quot;password&quot; name=&quot;password&quot; class=&quot;input w-full&quot; /&gt;
+            &lt;span class=&quot;hint&quot;&gt;Tối thiểu 6 ký tự&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;input type=&quot;submit&quot; class=&quot;btn btn-block&quot; value=&quot;Đăng nhập&quot; /&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>3. Form dạng bảng (thanh toán, admin thêm/sửa)</h2>
+        <p class="muted mb-20">Cột nhãn class form-label; ô nhập chọn độ rộng w-500, w-300, w-200...</p>
+<table class="form-table" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="form-label">Loại sản phẩm</td>
+        <td>
+            <select name="loai" class="input w-300">
+                <option value="NH" selected="selected">Nhẫn</option>
+                <option value="DC">Dây chuyền</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">Tên sản phẩm <span class="req">*</span></td>
+        <td><input type="text" name="ten" class="input w-500" value="Nhẫn vàng 18K đính đá Ruby" /></td>
+    </tr>
+    <tr>
+        <td class="form-label">Hình ảnh</td>
+        <td><input type="file" name="hinh" /></td>
+    </tr>
+    <tr>
+        <td class="form-label">Phương thức thanh toán</td>
+        <td>
+            <label class="radio-line"><input type="radio" name="tt" value="tienmat" checked="checked" /> Tiền mặt khi nhận hàng</label>
+            <label class="radio-line"><input type="radio" name="tt" value="chuyenkhoan" /> Chuyển khoản</label>
+            <label class="radio-line"><input type="radio" name="tt" value="online" /> Thanh toán trực tuyến</label>
+        </td>
+    </tr>
+    <tr>
+        <td class="form-label">Mô tả</td>
+        <td><textarea name="mota" class="textarea w-500" rows="4" cols="60"></textarea></td>
+    </tr>
+</table>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;table class=&quot;form-table&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;form-label&quot;&gt;Loại sản phẩm&lt;/td&gt;
+        &lt;td&gt;
+            &lt;select name=&quot;loai&quot; class=&quot;input w-300&quot;&gt;
+                &lt;option value=&quot;NH&quot; selected=&quot;selected&quot;&gt;Nhẫn&lt;/option&gt;
+                &lt;option value=&quot;DC&quot;&gt;Dây chuyền&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;form-label&quot;&gt;Tên sản phẩm &lt;span class=&quot;req&quot;&gt;*&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;ten&quot; class=&quot;input w-500&quot; value=&quot;Nhẫn vàng 18K đính đá Ruby&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;form-label&quot;&gt;Hình ảnh&lt;/td&gt;
+        &lt;td&gt;&lt;input type=&quot;file&quot; name=&quot;hinh&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;form-label&quot;&gt;Phương thức thanh toán&lt;/td&gt;
+        &lt;td&gt;
+            &lt;label class=&quot;radio-line&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;tt&quot; value=&quot;tienmat&quot; checked=&quot;checked&quot; /&gt; Tiền mặt khi nhận hàng&lt;/label&gt;
+            &lt;label class=&quot;radio-line&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;tt&quot; value=&quot;chuyenkhoan&quot; /&gt; Chuyển khoản&lt;/label&gt;
+            &lt;label class=&quot;radio-line&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;tt&quot; value=&quot;online&quot; /&gt; Thanh toán trực tuyến&lt;/label&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;form-label&quot;&gt;Mô tả&lt;/td&gt;
+        &lt;td&gt;&lt;textarea name=&quot;mota&quot; class=&quot;textarea w-500&quot; rows=&quot;4&quot; cols=&quot;60&quot;&gt;&lt;/textarea&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>4. Bảng dữ liệu + nhãn trạng thái</h2>
+        <p class="muted mb-20">Luôn ghi cellspacing="0" cellpadding="0". Cột số căn phải bằng class num.</p>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã đơn</th><th>Khách hàng</th><th class="num">Tổng tiền</th><th>Tình trạng</th><th>Thao tác</th>
+    </tr>
+    <tr>
+        <td>DH0005</td><td>Võ Thanh Trúc</td><td class="num">9.470.000 ₫</td>
+        <td><span class="badge badge-new">Mới đặt</span></td>
+        <td><a class="btn btn-small btn-outline" href="#">Xem</a></td>
+    </tr>
+    <tr>
+        <td>DH0003</td><td>Lê Hoàng Yến</td><td class="num">14.590.000 ₫</td>
+        <td><span class="badge badge-processing">Đã xử lý</span></td>
+        <td><a class="btn btn-small btn-outline" href="#">Xem</a></td>
+    </tr>
+    <tr class="row-warning">
+        <td>DH0006</td><td>Đặng Gia Huy</td><td class="num">16.380.000 ₫</td>
+        <td><span class="badge badge-cancel">Hủy</span></td>
+        <td><a class="btn btn-small btn-outline" href="#">Xem</a></td>
+    </tr>
+    <tr class="total">
+        <td colspan="2">Tổng cộng</td><td class="num">40.440.000 ₫</td><td colspan="2"></td>
+    </tr>
+</table>
+<p class="mt-10">
+    <span class="badge badge-done">Đã giao</span>
+    <span class="badge badge-draft">Chưa hoàn thành</span>
+    <span class="badge badge-active">Hoạt động</span>
+    <span class="badge badge-locked">Bị khóa</span>
+    <span class="badge badge-low">Sắp hết</span>
+</p>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;table class=&quot;table&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Mã đơn&lt;/th&gt;&lt;th&gt;Khách hàng&lt;/th&gt;&lt;th class=&quot;num&quot;&gt;Tổng tiền&lt;/th&gt;&lt;th&gt;Tình trạng&lt;/th&gt;&lt;th&gt;Thao tác&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;DH0005&lt;/td&gt;&lt;td&gt;Võ Thanh Trúc&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;9.470.000 ₫&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge badge-new&quot;&gt;Mới đặt&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a class=&quot;btn btn-small btn-outline&quot; href=&quot;#&quot;&gt;Xem&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;DH0003&lt;/td&gt;&lt;td&gt;Lê Hoàng Yến&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;14.590.000 ₫&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge badge-processing&quot;&gt;Đã xử lý&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a class=&quot;btn btn-small btn-outline&quot; href=&quot;#&quot;&gt;Xem&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;row-warning&quot;&gt;
+        &lt;td&gt;DH0006&lt;/td&gt;&lt;td&gt;Đặng Gia Huy&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;16.380.000 ₫&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge badge-cancel&quot;&gt;Hủy&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;a class=&quot;btn btn-small btn-outline&quot; href=&quot;#&quot;&gt;Xem&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;total&quot;&gt;
+        &lt;td colspan=&quot;2&quot;&gt;Tổng cộng&lt;/td&gt;&lt;td class=&quot;num&quot;&gt;40.440.000 ₫&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p class=&quot;mt-10&quot;&gt;
+    &lt;span class=&quot;badge badge-done&quot;&gt;Đã giao&lt;/span&gt;
+    &lt;span class=&quot;badge badge-draft&quot;&gt;Chưa hoàn thành&lt;/span&gt;
+    &lt;span class=&quot;badge badge-active&quot;&gt;Hoạt động&lt;/span&gt;
+    &lt;span class=&quot;badge badge-locked&quot;&gt;Bị khóa&lt;/span&gt;
+    &lt;span class=&quot;badge badge-low&quot;&gt;Sắp hết&lt;/span&gt;
+&lt;/p&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>5. Hộp thông báo</h2>
+        
+<div class="alert alert-success">Đặt hàng thành công! Mã đơn của bạn là <b>DH0008</b>.</div>
+<div class="alert alert-warning">Có 4 sản phẩm sắp hết hàng.</div>
+<div class="alert alert-danger">Tài khoản của bạn đã bị khóa. Vui lòng liên hệ cửa hàng.</div>
+<div class="alert alert-info">Bạn cần đăng nhập để sử dụng giỏ hàng.</div>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;div class=&quot;alert alert-success&quot;&gt;Đặt hàng thành công! Mã đơn của bạn là &lt;b&gt;DH0008&lt;/b&gt;.&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;Có 4 sản phẩm sắp hết hàng.&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot;&gt;Tài khoản của bạn đã bị khóa. Vui lòng liên hệ cửa hàng.&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;Bạn cần đăng nhập để sử dụng giỏ hàng.&lt;/div&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>6. Phân trang</h2>
+        <p class="muted mb-20">Mỗi trang là 1 file html riêng (nhan.html, nhan-2.html...). Trang hiện tại dùng span.current.</p>
+<div class="pagination">
+    <span class="disabled">&laquo;</span>
+    <span class="current">1</span>
+    <a href="#">2</a>
+    <a href="#">&raquo;</a>
+</div>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;div class=&quot;pagination&quot;&gt;
+    &lt;span class=&quot;disabled&quot;&gt;&amp;laquo;&lt;/span&gt;
+    &lt;span class=&quot;current&quot;&gt;1&lt;/span&gt;
+    &lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;&amp;raquo;&lt;/a&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>7. Thanh công cụ trên trang danh mục</h2>
+        
+<div class="toolbar">
+    <p class="result-count">Hiển thị 1–4 trong 6 sản phẩm</p>
+    <form name="frmSort" action="#" method="get">
+        <select name="sapxep" class="input w-200">
+            <option>Mới nhất</option>
+            <option>Giá tăng dần</option>
+            <option>Giá giảm dần</option>
+        </select>
+        <input type="submit" class="btn" value="Lọc" />
+    </form>
+    <div class="clear"></div>
+</div>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;div class=&quot;toolbar&quot;&gt;
+    &lt;p class=&quot;result-count&quot;&gt;Hiển thị 1–4 trong 6 sản phẩm&lt;/p&gt;
+    &lt;form name=&quot;frmSort&quot; action=&quot;#&quot; method=&quot;get&quot;&gt;
+        &lt;select name=&quot;sapxep&quot; class=&quot;input w-200&quot;&gt;
+            &lt;option&gt;Mới nhất&lt;/option&gt;
+            &lt;option&gt;Giá tăng dần&lt;/option&gt;
+            &lt;option&gt;Giá giảm dần&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;input type=&quot;submit&quot; class=&quot;btn&quot; value=&quot;Lọc&quot; /&gt;
+    &lt;/form&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>8. Bố cục 2 cột (tài khoản, đơn hàng)</h2>
+        <p class="muted mb-20">.sidebar 270px trái + .main 900px phải. Nhớ thẻ div.clear ở cuối.</p>
+<div class="sidebar">
+    <div class="side-menu">
+        <h3>Tài khoản</h3>
+        <a class="active" href="#">Thông tin cá nhân</a>
+        <a href="#">Sửa thông tin</a>
+        <a href="#">Đơn hàng đã mua</a>
+        <a href="#">Đăng xuất</a>
+    </div>
+</div>
+<div class="main">
+    <div class="panel">
+        <h2>Thông tin cá nhân</h2>
+        <p>Nội dung cột phải...</p>
+    </div>
+</div>
+<div class="clear"></div>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;div class=&quot;sidebar&quot;&gt;
+    &lt;div class=&quot;side-menu&quot;&gt;
+        &lt;h3&gt;Tài khoản&lt;/h3&gt;
+        &lt;a class=&quot;active&quot; href=&quot;#&quot;&gt;Thông tin cá nhân&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Sửa thông tin&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Đơn hàng đã mua&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Đăng xuất&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;main&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+        &lt;h2&gt;Thông tin cá nhân&lt;/h2&gt;
+        &lt;p&gt;Nội dung cột phải...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>9. Chi tiết sản phẩm</h2>
+        <p class="muted mb-20">.detail-img 520px trái + .detail-info 640px phải.</p>
+<div class="detail-img">
+    <img src="../images/products/nh02.svg" alt="Nhẫn vàng 18K đính đá Ruby" title="Nhẫn vàng 18K đính đá Ruby" />
+</div>
+<div class="detail-info">
+    <p class="p-code">NH02 · Nhẫn</p>
+    <h1>Nhẫn vàng 18K đính đá Ruby</h1>
+    <p class="detail-price">9.360.000 ₫</p>
+    <table class="spec-table" cellspacing="0" cellpadding="0">
+        <tr><td class="spec-name">Chất liệu</td><td>Vàng 18K</td></tr>
+        <tr><td class="spec-name">Đá chủ</td><td>Ruby</td></tr>
+        <tr><td class="spec-name">Trọng lượng</td><td>2.9 g</td></tr>
+        <tr><td class="spec-name">Tình trạng</td><td>Còn 7 sản phẩm</td></tr>
+    </table>
+    <form name="frmBuy" action="#" method="get">
+        Số lượng: <input type="text" name="sl" value="1" class="input w-60" />
+        <input type="submit" class="btn btn-gold" value="Thêm vào giỏ" />
+    </form>
+</div>
+<div class="clear"></div>
+        <div class="clear"></div>
+        <pre class="guide-code">&lt;div class=&quot;detail-img&quot;&gt;
+    &lt;img src=&quot;../images/products/nh02.svg&quot; alt=&quot;Nhẫn vàng 18K đính đá Ruby&quot; title=&quot;Nhẫn vàng 18K đính đá Ruby&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;detail-info&quot;&gt;
+    &lt;p class=&quot;p-code&quot;&gt;NH02 · Nhẫn&lt;/p&gt;
+    &lt;h1&gt;Nhẫn vàng 18K đính đá Ruby&lt;/h1&gt;
+    &lt;p class=&quot;detail-price&quot;&gt;9.360.000 ₫&lt;/p&gt;
+    &lt;table class=&quot;spec-table&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
+        &lt;tr&gt;&lt;td class=&quot;spec-name&quot;&gt;Chất liệu&lt;/td&gt;&lt;td&gt;Vàng 18K&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class=&quot;spec-name&quot;&gt;Đá chủ&lt;/td&gt;&lt;td&gt;Ruby&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class=&quot;spec-name&quot;&gt;Trọng lượng&lt;/td&gt;&lt;td&gt;2.9 g&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td class=&quot;spec-name&quot;&gt;Tình trạng&lt;/td&gt;&lt;td&gt;Còn 7 sản phẩm&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;form name=&quot;frmBuy&quot; action=&quot;#&quot; method=&quot;get&quot;&gt;
+        Số lượng: &lt;input type=&quot;text&quot; name=&quot;sl&quot; value=&quot;1&quot; class=&quot;input w-60&quot; /&gt;
+        &lt;input type=&quot;submit&quot; class=&quot;btn btn-gold&quot; value=&quot;Thêm vào giỏ&quot; /&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</pre>
+    </div>
+
+    <div class="panel">
+        <h2>10. Thẻ sản phẩm</h2>
+        <p class="muted mb-20">Trong lưới 4 cột, thẻ thứ 4 của mỗi hàng thêm class <b>last</b>. Đường dẫn ảnh/link tùy thư mục của trang.</p>
+            <div class="product">
+                <a class="product-img" href="../san-pham/nh02.html"><img src="../images/products/nh02.svg" alt="Nhẫn vàng 18K đính đá Ruby" title="Nhẫn vàng 18K đính đá Ruby" width="280" height="280" /></a>
+                <div class="product-info">
+                    <p class="p-code">NH02 · Nhẫn</p>
+                    <h3 class="p-name"><a href="../san-pham/nh02.html">Nhẫn vàng 18K đính đá Ruby</a></h3>
+                    <p class="p-price">9.360.000 ₫</p>
+                    <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html" title="Cần đăng nhập để mua">Thêm vào giỏ</a>
+                </div>
+            </div>
+        <div class="clear"></div>
+        <pre class="guide-code">            &lt;div class=&quot;product&quot;&gt;
+                &lt;a class=&quot;product-img&quot; href=&quot;../san-pham/nh02.html&quot;&gt;&lt;img src=&quot;../images/products/nh02.svg&quot; alt=&quot;Nhẫn vàng 18K đính đá Ruby&quot; title=&quot;Nhẫn vàng 18K đính đá Ruby&quot; width=&quot;280&quot; height=&quot;280&quot; /&gt;&lt;/a&gt;
+                &lt;div class=&quot;product-info&quot;&gt;
+                    &lt;p class=&quot;p-code&quot;&gt;NH02 · Nhẫn&lt;/p&gt;
+                    &lt;h3 class=&quot;p-name&quot;&gt;&lt;a href=&quot;../san-pham/nh02.html&quot;&gt;Nhẫn vàng 18K đính đá Ruby&lt;/a&gt;&lt;/h3&gt;
+                    &lt;p class=&quot;p-price&quot;&gt;9.360.000 ₫&lt;/p&gt;
+                    &lt;a class=&quot;btn btn-small btn-block btn-outline&quot; href=&quot;../dang-nhap.html&quot; title=&quot;Cần đăng nhập để mua&quot;&gt;Thêm vào giỏ&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+</pre>
+    </div>
+</div>
+
+<!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->
+<div id="footer">
+    <div class="container">
+        <div class="footer-col">
+            <span class="footer-logo">AURELIA</span>
+            <p>Trang sức vàng, bạc, kim cương và đá quý được chế tác tinh xảo, kiểm định chất lượng, bảo hành trọn đời.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Danh mục</h4>
+            <ul>
+                    <li><a href="../danh-muc/nhan.html">Nhẫn</a></li>
+                    <li><a href="../danh-muc/day-chuyen.html">Dây chuyền</a></li>
+                    <li><a href="../danh-muc/bong-tai.html">Bông tai</a></li>
+                    <li><a href="../danh-muc/vong-tay.html">Vòng tay</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Tài khoản</h4>
+            <ul>
+                    <li><a href="../dang-nhap.html">Đăng nhập</a></li>
+                    <li><a href="../dang-ky.html">Đăng ký tài khoản</a></li>
+                    <li><a href="../tim-kiem-nang-cao.html">Tìm kiếm nâng cao</a></li>
+            </ul>
+        </div>
+        <div class="footer-col last">
+            <h4>Liên hệ</h4>
+            <ul>
+                <li>273 An Dương Vương, Phường 3, Quận 5, TP. HCM</li>
+                <li>Hotline: 1900 6868</li>
+                <li>Email: <a href="mailto:hotro@aurelia.example">hotro@aurelia.example</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="copyright">
+            Đồ án học phần Lập trình web và ứng dụng — Nhóm ... — Khoa CNTT, Trường Đại học Sài Gòn, 2026
+        </div>
+    </div>
+</div>
+<!-- ============ HẾT FOOTER ============ -->
+
+</body>
+</html>

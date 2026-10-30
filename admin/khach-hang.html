@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Quản lý khách hàng - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm | Barem: I.2 - Danh sách, reset mật khẩu, khóa/mở khóa -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html" class="active">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html">Tồn kho</a>
+    <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Quản lý khách hàng</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / Quản lý khách hàng</p>
+
+<div class="todo-box">
+    <span class="todo-owner">PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm</span>
+    <h3>Cần làm ở trang này</h3>
+    <ul>
+        <li>Bảng 6 khách hàng (docs/DU-LIEU-MAU.md): mã, họ tên, tên đăng nhập, email, SĐT, ngày tạo, trạng thái (<code>.badge-active</code> / <code>.badge-locked</code>).</li>
+        <li>Ô tìm kiếm theo tên/email phía trên bảng (<code>.filter-bar</code>).</li>
+        <li>Mỗi dòng có nút <b>Reset mật khẩu</b> và <b>Khóa</b> (nếu đang hoạt động) hoặc <b>Mở khóa</b> (KH04 đang bị khóa).</li>
+        <li>Gợi ý trang kết quả: khach-hang-da-khoa.html (sau khi khóa KH02), khach-hang-da-mo-khoa.html (sau khi mở khóa KH04) có <code>.alert</code> thông báo.</li>
+    </ul>
+    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
+    <ul class="todo-flow">
+        <li><a href="khach-hang-reset-mk.html">Reset mật khẩu → khach-hang-reset-mk.html</a></li>
+    </ul>
+    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+</div>
+
+</div>
+
+</body>
+</html>

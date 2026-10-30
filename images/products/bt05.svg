@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600"><defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="70%">
+<stop offset="0%" stop-color="#fdfaf5"/><stop offset="70%" stop-color="#f1e9dd"/><stop offset="100%" stop-color="#e6dac8"/>
+</radialGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#f6df9a"/><stop offset="45%" stop-color="#c9a24a"/><stop offset="100%" stop-color="#8f6d27"/>
+</linearGradient>
+<linearGradient id="metal2" x1="1" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#f6df9a"/><stop offset="55%" stop-color="#c9a24a"/><stop offset="100%" stop-color="#8f6d27"/>
+</linearGradient>
+<linearGradient id="gem" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#8ee3b8"/><stop offset="50%" stop-color="#1f7a52"/><stop offset="100%" stop-color="#0a3a25"/>
+</linearGradient>
+<radialGradient id="pearl" cx="35%" cy="32%" r="70%">
+<stop offset="0%" stop-color="#ffffff"/><stop offset="60%" stop-color="#f1ebe0"/><stop offset="100%" stop-color="#cdbfa9"/>
+</radialGradient>
+<radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#bfae94" stop-opacity="0.45"/><stop offset="100%" stop-color="#bfae94" stop-opacity="0"/>
+</radialGradient>
+</defs><rect width="600" height="600" fill="url(#bg)"/><ellipse cx="300.0" cy="498.0" rx="180.0" ry="24.0" fill="url(#shadow)"/><path d="M189,170 C189,130 227,126 227,160 L227,176" fill="none" stroke="url(#metal)" stroke-width="5" stroke-linecap="round"/><circle cx="189" cy="186" r="10" fill="url(#metal)"/><line x1="189" y1="196" x2="189" y2="236" stroke="url(#metal2)" stroke-width="4"/><path d="M189,236 C210.6,288.5 256.5,318.5 243.0,356.0 C232.2,389.0 145.8,389.0 135.0,356.0 C121.5,318.5 167.4,288.5 189,236 Z" fill="url(#gem)" stroke="url(#metal)" stroke-width="3"/><ellipse cx="170.1" cy="329.0" rx="11.9" ry="15.0" fill="#ffffff" fill-opacity="0.6"/><path d="M379,170 C379,130 417,126 417,160 L417,176" fill="none" stroke="url(#metal)" stroke-width="5" stroke-linecap="round"/><circle cx="379" cy="186" r="10" fill="url(#metal)"/><line x1="379" y1="196" x2="379" y2="236" stroke="url(#metal2)" stroke-width="4"/><path d="M379,236 C400.6,288.5 446.5,318.5 433.0,356.0 C422.2,389.0 335.8,389.0 325.0,356.0 C311.5,318.5 357.4,288.5 379,236 Z" fill="url(#gem)" stroke="url(#metal)" stroke-width="3"/><ellipse cx="360.1" cy="329.0" rx="11.9" ry="15.0" fill="#ffffff" fill-opacity="0.6"/><path d="M470,187 L472.86,197.14 L483,200 L472.86,202.86 L470,213 L467.14,202.86 L457,200 L467.14,197.14 Z" fill="#ffffff" fill-opacity="0.9"/><path d="M130,371 L131.98,378.02 L139,380 L131.98,381.98 L130,389 L128.02,381.98 L121,380 L128.02,378.02 Z" fill="#ffffff" fill-opacity="0.9"/></svg>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Bảng điều khiển - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm | Barem: I.1 - Danh mục chức năng quản trị -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html" class="active">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html">Tồn kho</a>
+    <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Bảng điều khiển</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+
+    <div class="mb-20">
+    <div class="stat-col">
+        <div class="stat">
+            <p class="stat-label">Đơn hàng mới</p>
+            <p class="stat-value">3</p>
+        </div>
+    </div>
+    <div class="stat-col">
+        <div class="stat">
+            <p class="stat-label">Doanh thu tháng 10</p>
+            <p class="stat-value">32.260.000 ₫</p>
+        </div>
+    </div>
+    <div class="stat-col">
+        <div class="stat">
+            <p class="stat-label">Khách hàng</p>
+            <p class="stat-value">6</p>
+        </div>
+    </div>
+    <div class="stat-col last">
+        <div class="stat">
+            <p class="stat-label">Sản phẩm sắp hết</p>
+            <p class="stat-value">4</p>
+        </div>
+    </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="col-left">
+        <div class="card">
+            <h2 class="card-title">Đơn hàng gần đây <a class="right btn btn-small btn-outline" href="don-hang.html">Xem tất cả</a></h2>
+            <table class="table" cellspacing="0" cellpadding="0">
+                <tr><th>Mã đơn</th><th>Khách hàng</th><th>Ngày đặt</th><th class="num">Tổng tiền</th><th>Tình trạng</th></tr>
+            <tr>
+                <td><a href="don-hang-chi-tiet.html">DH0008</a></td>
+                <td>Nguyễn Thị Lan</td>
+                <td>30/10/2026</td>
+                <td class="num">25.890.000 ₫</td>
+                <td><span class="badge badge-new">Mới đặt</span></td>
+            </tr>
+            <tr>
+                <td><a href="don-hang-chi-tiet.html">DH0007</a></td>
+                <td>Trần Minh Khoa</td>
+                <td>28/10/2026</td>
+                <td class="num">1.880.000 ₫</td>
+                <td><span class="badge badge-new">Mới đặt</span></td>
+            </tr>
+            <tr>
+                <td><a href="don-hang-chi-tiet.html">DH0006</a></td>
+                <td>Đặng Gia Huy</td>
+                <td>27/10/2026</td>
+                <td class="num">16.380.000 ₫</td>
+                <td><span class="badge badge-cancel">Hủy</span></td>
+            </tr>
+            <tr>
+                <td><a href="don-hang-chi-tiet.html">DH0005</a></td>
+                <td>Võ Thanh Trúc</td>
+                <td>25/10/2026</td>
+                <td class="num">9.470.000 ₫</td>
+                <td><span class="badge badge-new">Mới đặt</span></td>
+            </tr>
+            <tr>
+                <td><a href="don-hang-chi-tiet.html">DH0004</a></td>
+                <td>Nguyễn Thị Lan</td>
+                <td>21/10/2026</td>
+                <td class="num">1.850.000 ₫</td>
+                <td><span class="badge badge-processing">Đã xử lý</span></td>
+            </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-right">
+        <div class="card">
+            <h2 class="card-title">Cảnh báo sắp hết hàng</h2>
+            <p class="muted mb-10">Sản phẩm có tồn kho ≤ 3</p>
+            <table class="table" cellspacing="0" cellpadding="0">
+                <tr><th>Mã</th><th>Sản phẩm</th><th class="num">Tồn</th></tr>
+            <tr class="row-warning">
+                <td>NH01</td>
+                <td>Nhẫn kim cương Solitaire vàng trắng 18K</td>
+                <td class="num"><span class="badge badge-low">2</span></td>
+            </tr>
+            <tr class="row-warning">
+                <td>DC05</td>
+                <td>Dây chuyền vàng 24K kiểu Ý</td>
+                <td class="num"><span class="badge badge-low">1</span></td>
+            </tr>
+            <tr class="row-warning">
+                <td>BT05</td>
+                <td>Bông tai Emerald vàng 18K dáng dài</td>
+                <td class="num"><span class="badge badge-low">3</span></td>
+            </tr>
+            <tr class="row-warning">
+                <td>VT01</td>
+                <td>Lắc tay Tennis vàng 18K đính kim cương tấm</td>
+                <td class="num"><span class="badge badge-low">2</span></td>
+            </tr>
+            </table>
+            <p class="mt-20"><a class="btn btn-small btn-gold" href="nhap-hang-them.html">Lập phiếu nhập</a></p>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+
+</body>
+</html>
