@@ -3,7 +3,7 @@
 Đồ án cuối kỳ học phần **Lập trình web và ứng dụng** — Khoa CNTT, Trường Đại học Sài Gòn.
 Giao diện website bán trang sức dạng *clickable prototype*: các trang HTML/CSS liên kết với nhau, gồm phần khách hàng và phần quản trị.
 
-- **Xem online:** `https://<tai-khoan-TV1>.github.io/do-an-web-trang-suc/` *(TV1 cập nhật sau khi bật GitHub Pages)*
+- **Xem online:** `https://nguyenduylkkl111-co.github.io/do-an-web-trang-suc/` *(TV1 cập nhật sau khi bật GitHub Pages)*
 - **Xem trên máy:** mở trực tiếp file `index.html` bằng Google Chrome (không cần cài server).
 - **Trang quản trị:** mở `admin/dang-nhap.html` — tài khoản mẫu `admin` / `admin123`.
 - **Khách hàng mẫu:** `lannguyen` / `123456`.
@@ -14,11 +14,11 @@ Xem bảng phân công chi tiết theo barem trong **[PHAN-CONG.md](PHAN-CONG.md
 
 | TV | Họ tên | MSSV | Phụ trách |
 |---|---|---|---|
-| TV1 | | | Nhóm trưởng — Nền tảng, Tài khoản khách hàng, Deploy |
-| TV2 | | | Sản phẩm & Tìm kiếm |
-| TV3 | | | Giỏ hàng, Thanh toán, Đơn hàng |
-| TV4 | | | Admin: Đăng nhập, Khách hàng, Loại SP, Sản phẩm |
-| TV5 | | | Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho |
+| TV1 | Nguyễn Hoàng Duy | 3124560015 | Nhóm trưởng — Nền tảng, Tài khoản khách hàng, Deploy |
+| TV2 | Phạm Thành Danh | 3124410034 | Sản phẩm & Tìm kiếm |
+| TV3 | Bùi Đình Nhật Trường | 3125560071 | Giỏ hàng, Thanh toán, Đơn hàng |
+| TV4 | Nguyễn Trọng Nghĩa | 3125410115 | Admin: Đăng nhập, Khách hàng, Loại SP, Sản phẩm |
+| TV5 | Nguyễn Trọng Trí | 3125560069 | Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho |
 
 ## Cấu trúc thư mục
 
