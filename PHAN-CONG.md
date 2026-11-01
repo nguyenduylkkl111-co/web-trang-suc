@@ -5,11 +5,11 @@
 
 | TV | Họ tên | MSSV | Vai trò | Điểm barem phụ trách | Khối lượng |
 |---|---|---|---|---|---|
-| TV1 | | | Nhóm trưởng — Nền tảng & Tài khoản khách hàng + Deploy | II.1 (1.0) + nền tảng chung + cộng điểm deploy | 20% |
-| TV2 | | | Sản phẩm & Tìm kiếm (phía khách) | II.2 (2.0) | 20% |
-| TV3 | | | Giỏ hàng, Thanh toán, Đơn hàng (phía khách) | II.3 + II.4 (2.0) | 20% |
-| TV4 | | | Admin phần 1: Đăng nhập, Khách hàng, Loại SP, Sản phẩm | I.1 – I.4 (2.5) | 20% |
-| TV5 | | | Admin phần 2: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | I.5 – I.8 (2.5) | 20% |
+| TV1 | Nguyễn Hoàng Duy | 3124560015 | Nhóm trưởng — Nền tảng & Tài khoản khách hàng + Deploy | II.1 (1.0) + nền tảng chung + cộng điểm deploy | 20% |
+| TV2 | Phạm Thành Danh | 3124410034 | Sản phẩm & Tìm kiếm (phía khách) | II.2 (2.0) | 20% |
+| TV3 | Bùi Đình Nhật Trường | 3125560071 | Giỏ hàng, Thanh toán, Đơn hàng (phía khách) | II.3 + II.4 (2.0) | 20% |
+| TV4 | Nguyễn Trọng Nghĩa | 3125410115 | Admin phần 1: Đăng nhập, Khách hàng, Loại SP, Sản phẩm | I.1 – I.4 (2.5) | 20% |
+| TV5 | Nguyễn Trọng Trí | 3125560069 | Admin phần 2: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | I.5 – I.8 (2.5) | 20% |
 
 **Cộng điểm (chia đều):** mỗi người tự thiết kế layout các trang của mình trên **Figma** (TV1 tạo file chung) → +1.0;
 TV1 đưa web lên **GitHub Pages** → +1.0.
