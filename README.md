@@ -3,7 +3,7 @@
 Đồ án cuối kỳ học phần **Lập trình web và ứng dụng** — Khoa CNTT, Trường Đại học Sài Gòn.
 Giao diện website bán trang sức dạng *clickable prototype*: các trang HTML/CSS liên kết với nhau, gồm phần khách hàng và phần quản trị.
 
-- **Xem online:** `https://nguyenduylkkl111-co.github.io/do-an-web-trang-suc/` *(TV1 cập nhật sau khi bật GitHub Pages)*
+- **Xem online:** `https://nguyenduylkkl111-co.github.io/web-trang-suc/` 
 - **Xem trên máy:** mở trực tiếp file `index.html` bằng Google Chrome (không cần cài server).
 - **Trang quản trị:** mở `admin/dang-nhap.html` — tài khoản mẫu `admin` / `admin123`.
 - **Khách hàng mẫu:** `lannguyen` / `123456`.
@@ -23,7 +23,7 @@ Xem bảng phân công chi tiết theo barem trong **[PHAN-CONG.md](PHAN-CONG.md
 ## Cấu trúc thư mục
 
 ```
-do-an-web-trang-suc/
+web-trang-suc/
 ├── index.html                 Trang chủ (khách chưa đăng nhập)
 ├── dang-nhap.html, dang-ky.html
 ├── danh-muc/                  Sản phẩm theo loại, có phân trang (nhan.html, nhan-2.html, ...)
