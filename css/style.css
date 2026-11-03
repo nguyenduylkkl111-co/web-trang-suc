@@ -615,3 +615,15 @@ h1, h2, h3, h4,
 
 
 /* ----- TV4 / TV5: phần admin viết trong css/admin.css ----- */
+
+/* ===== TV1: form đăng ký ===== */
+.form-row select {
+    box-sizing: border-box;
+    width: 245px;
+    height: 47px;
+    padding: 0 12px;
+    border: 1px solid #d9d2c5;
+    background: #fff;
+    font-size: 15px;
+}
+form p a { text-decoration: underline; }
