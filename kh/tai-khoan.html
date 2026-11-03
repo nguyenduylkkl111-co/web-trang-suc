@@ -63,22 +63,27 @@
 <div class="container">
     <h1 class="page-title">Tài khoản của tôi</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV1 (Nhóm trưởng) — Nền tảng & Tài khoản khách hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Bố cục 2 cột: cột trái <code>.sidebar</code> là menu tài khoản (Thông tin cá nhân, Sửa thông tin, Đơn hàng đã mua, Đăng xuất); cột phải <code>.main</code>.</li>
-        <li>Hiển thị thông tin của <b>Nguyễn Thị Lan</b> (mã KH01): họ tên, tên đăng nhập, email, SĐT, địa chỉ, ngày tham gia.</li>
-        <li>Nút Sửa thông tin → tai-khoan-sua.html.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="tai-khoan-sua.html">Sửa thông tin → tai-khoan-sua.html</a></li>
-        <li><a href="don-hang.html">Đơn hàng đã mua → don-hang.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
-
+<div class="account-wrap">
+    <div class="sidebar">
+        <ul>
+            <li class="active"><a href="tai-khoan.html">Thông tin cá nhân</a></li>
+            <li><a href="tai-khoan-sua.html">Sửa thông tin</a></li>
+            <li><a href="don-hang.html">Đơn hàng đã mua</a></li>
+            <li><a href="../index.html">Đăng xuất</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <table class="info-table">
+            <tr><th>Mã khách hàng</th><td>KH01</td></tr>
+            <tr><th>Họ và tên</th><td>Nguyễn Thị Lan</td></tr>
+            <tr><th>Tên đăng nhập</th><td>lannguyen</td></tr>
+            <tr><th>Email</th><td>lan.nguyen@example.com</td></tr>
+            <tr><th>Số điện thoại</th><td>0901 234 567</td></tr>
+            <tr><th>Địa chỉ</th><td>45 Trần Hưng Đạo, Phường Cầu Ông Lãnh, Quận 1, TP. Hồ Chí Minh</td></tr>
+            <tr><th>Ngày tham gia</th><td>12/08/2026</td></tr>
+        </table>
+        <p><a class="btn" href="tai-khoan-sua.html">Sửa thông tin</a></p>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

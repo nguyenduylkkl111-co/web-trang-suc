@@ -627,3 +627,14 @@ h1, h2, h3, h4,
     font-size: 15px;
 }
 form p a { text-decoration: underline; }
+/* ===== TV1: trang tài khoản ===== */
+.account-wrap { display: flex; gap: 40px; margin-bottom: 40px; }
+.account-wrap .sidebar { width: 220px; flex-shrink: 0; float: none; }
+.account-wrap .main { flex: 1; width: auto; float: none; }
+.account-wrap .sidebar ul { list-style: none; margin: 0; padding: 0; }
+.account-wrap .sidebar li a { display: block; padding: 12px 16px; border: 1px solid #d9d2c5; border-bottom: 0; background: #fff; color: #1c1917; text-decoration: none; }
+.account-wrap .sidebar li:last-child a { border-bottom: 1px solid #d9d2c5; }
+.account-wrap .sidebar li.active a { background: #1c1917; color: #fff; }
+.info-table { border-collapse: collapse; width: 100%; background: #fff; }
+.info-table th, .info-table td { text-align: left; padding: 12px 16px; border: 1px solid #d9d2c5; }
+.info-table th { width: 200px; background: #f4efe6; }
