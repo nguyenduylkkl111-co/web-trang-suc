@@ -63,26 +63,71 @@
 <div class="container">
     <h1 class="page-title">Vòng tay</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV2 — Sản phẩm & Tìm kiếm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Trang 1/2 của loại <b>Vòng tay</b> (6 sản phẩm, 4 sản phẩm/trang): hiển thị <b>VT01, VT02, VT03, VT04</b>.</li>
-        <li>Thanh <code>.toolbar</code>: số kết quả + ô sắp xếp; dưới cùng là thanh <code>.pagination</code> (trang hiện tại dùng <code>span.current</code>).</li>
-        <li>Thẻ sản phẩm dùng đúng mẫu <code>.product</code> như trang chủ (ảnh, mã, tên, giá, nút Thêm vào giỏ).</li>
-        <li>Khách chưa đăng nhập: nút Thêm vào giỏ trỏ tới <code>../dang-nhap.html</code>.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="../san-pham/vt01.html">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</a></li>
-        <li><a href="../san-pham/vt02.html">VT02 - Vòng kiềng vàng 24K trơn</a></li>
-        <li><a href="../san-pham/vt03.html">VT03 - Lắc tay bạc 925 charm trái tim</a></li>
-        <li><a href="../san-pham/vt04.html">VT04 - Vòng tay vàng hồng 14K đính Sapphire</a></li>
-        <li><a href="vong-tay-2.html">Trang 2</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- THANH CÔNG CỤ: số kết quả (trái) + sắp xếp (phải) -->
+    <div class="toolbar">
+        <p class="result-count">Hiển thị 1–4 trong 6 sản phẩm</p>
+        <form name="frmSapXep" action="vong-tay.html" method="get">
+            <select name="sapxep" class="input w-200">
+                <option value="moi" selected="selected">Mới nhất</option>
+                <option value="tang">Giá tăng dần</option>
+                <option value="giam">Giá giảm dần</option>
+            </select>
+            <input type="submit" class="btn" value="Sắp xếp" />
+        </form>
+        <div class="clear"></div>
+    </div>
 
+    <!-- LƯỚI SẢN PHẨM: 4 sản phẩm / trang, thẻ thứ 4 có class last -->
+    <div class="product">
+        <span class="tag tag-sale">Sắp hết</span>
+        <a class="product-img" href="../san-pham/vt01.html"><img src="../images/products/vt01.svg" alt="Lắc tay Tennis vàng 18K đính kim cương tấm" title="Lắc tay Tennis vàng 18K đính kim cương tấm" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">VT01 · Vòng tay</p>
+            <h3 class="p-name"><a href="../san-pham/vt01.html">Lắc tay Tennis vàng 18K đính kim cương tấm</a></h3>
+            <p class="p-price">31.360.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/vt02.html"><img src="../images/products/vt02.svg" alt="Vòng kiềng vàng 24K trơn" title="Vòng kiềng vàng 24K trơn" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">VT02 · Vòng tay</p>
+            <h3 class="p-name"><a href="../san-pham/vt02.html">Vòng kiềng vàng 24K trơn</a></h3>
+            <p class="p-price">18.480.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/vt03.html"><img src="../images/products/vt03.svg" alt="Lắc tay bạc 925 charm trái tim" title="Lắc tay bạc 925 charm trái tim" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">VT03 · Vòng tay</p>
+            <h3 class="p-name"><a href="../san-pham/vt03.html">Lắc tay bạc 925 charm trái tim</a></h3>
+            <p class="p-price">1.100.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product last">
+        <a class="product-img" href="../san-pham/vt04.html"><img src="../images/products/vt04.svg" alt="Vòng tay vàng hồng 14K đính Sapphire" title="Vòng tay vàng hồng 14K đính Sapphire" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">VT04 · Vòng tay</p>
+            <h3 class="p-name"><a href="../san-pham/vt04.html">Vòng tay vàng hồng 14K đính Sapphire</a></h3>
+            <p class="p-price">9.470.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <!-- PHÂN TRANG -->
+    <div class="pagination">
+        <span class="disabled">&laquo;</span>
+        <span class="current">1</span>
+        <a href="vong-tay-2.html">2</a>
+        <a href="vong-tay-2.html">&raquo;</a>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

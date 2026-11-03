@@ -63,24 +63,51 @@
 <div class="container">
     <h1 class="page-title">Bông tai - Trang 2</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV2 — Sản phẩm & Tìm kiếm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Trang 2/2 của loại <b>Bông tai</b> (6 sản phẩm, 4 sản phẩm/trang): hiển thị <b>BT05, BT06</b>.</li>
-        <li>Thanh <code>.toolbar</code>: số kết quả + ô sắp xếp; dưới cùng là thanh <code>.pagination</code> (trang hiện tại dùng <code>span.current</code>).</li>
-        <li>Thẻ sản phẩm dùng đúng mẫu <code>.product</code> như trang chủ (ảnh, mã, tên, giá, nút Thêm vào giỏ).</li>
-        <li>Khách chưa đăng nhập: nút Thêm vào giỏ trỏ tới <code>../dang-nhap.html</code>.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="../san-pham/bt05.html">BT05 - Bông tai Emerald vàng 18K dáng dài</a></li>
-        <li><a href="../san-pham/bt06.html">BT06 - Bông tai bạc 925 khoen tròn</a></li>
-        <li><a href="bong-tai.html">Trang 1</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- THANH CÔNG CỤ: số kết quả (trái) + sắp xếp (phải) -->
+    <div class="toolbar">
+        <p class="result-count">Hiển thị 5–6 trong 6 sản phẩm</p>
+        <form name="frmSapXep" action="bong-tai-2.html" method="get">
+            <select name="sapxep" class="input w-200">
+                <option value="moi" selected="selected">Mới nhất</option>
+                <option value="tang">Giá tăng dần</option>
+                <option value="giam">Giá giảm dần</option>
+            </select>
+            <input type="submit" class="btn" value="Sắp xếp" />
+        </form>
+        <div class="clear"></div>
+    </div>
 
+    <!-- LƯỚI SẢN PHẨM: 4 sản phẩm / trang, thẻ thứ 4 có class last -->
+    <div class="product">
+        <span class="tag tag-sale">Sắp hết</span>
+        <a class="product-img" href="../san-pham/bt05.html"><img src="../images/products/bt05.svg" alt="Bông tai Emerald vàng 18K dáng dài" title="Bông tai Emerald vàng 18K dáng dài" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">BT05 · Bông tai</p>
+            <h3 class="p-name"><a href="../san-pham/bt05.html">Bông tai Emerald vàng 18K dáng dài</a></h3>
+            <p class="p-price">11.070.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/bt06.html"><img src="../images/products/bt06.svg" alt="Bông tai bạc 925 khoen tròn" title="Bông tai bạc 925 khoen tròn" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">BT06 · Bông tai</p>
+            <h3 class="p-name"><a href="../san-pham/bt06.html">Bông tai bạc 925 khoen tròn</a></h3>
+            <p class="p-price">600.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <!-- PHÂN TRANG -->
+    <div class="pagination">
+        <a href="bong-tai.html">&laquo;</a>
+        <a href="bong-tai.html">1</a>
+        <span class="current">2</span>
+        <span class="disabled">&raquo;</span>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->
