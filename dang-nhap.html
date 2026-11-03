@@ -63,23 +63,24 @@
 <div class="container">
     <h1 class="page-title">Đăng nhập</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV1 (Nhóm trưởng) — Nền tảng & Tài khoản khách hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Form đăng nhập: tên đăng nhập, mật khẩu, nút Đăng nhập, link sang Đăng ký.</li>
-        <li>Form dùng <code>action="kh/index.html" method="get"</code> để bấm Đăng nhập là sang trang chủ của thành viên.</li>
-        <li>Tài khoản mẫu: <b>lannguyen</b> / <b>123456</b> (Nguyễn Thị Lan).</li>
-        <li>Gợi ý thêm: dang-nhap-loi.html (sai mật khẩu), thông báo tài khoản bị khóa.</li>
-        <li>Trang này KHÔNG có link sang trang đăng nhập admin (admin đăng nhập riêng).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="kh/index.html">Đăng nhập thành công → kh/index.html</a></li>
-        <li><a href="dang-ky.html">Chưa có tài khoản → dang-ky.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+<form name="frmDangNhap" action="kh/index.html" method="get">
+
+    <div class="form-row">
+        <label for="tendangnhap">Tên đăng nhập <span class="req">*</span></label>
+        <input type="text" id="tendangnhap" name="tendangnhap" class="input" placeholder="Ví dụ: lannguyen" required />
+    </div>
+
+    <div class="form-row">
+        <label for="matkhau">Mật khẩu <span class="req">*</span></label>
+        <input type="password" id="matkhau" class="input" required />
+    </div>
+
+    <div class="form-row">
+        <input type="submit" class="btn" value="Đăng nhập" />
+    </div>
+
+    <p>Chưa có tài khoản? <a href="dang-ky.html">Đăng ký ngay</a></p>
+</form>
 
 </div>
 
