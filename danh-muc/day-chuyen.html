@@ -63,26 +63,70 @@
 <div class="container">
     <h1 class="page-title">Dây chuyền</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV2 — Sản phẩm & Tìm kiếm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Trang 1/2 của loại <b>Dây chuyền</b> (6 sản phẩm, 4 sản phẩm/trang): hiển thị <b>DC01, DC02, DC03, DC04</b>.</li>
-        <li>Thanh <code>.toolbar</code>: số kết quả + ô sắp xếp; dưới cùng là thanh <code>.pagination</code> (trang hiện tại dùng <code>span.current</code>).</li>
-        <li>Thẻ sản phẩm dùng đúng mẫu <code>.product</code> như trang chủ (ảnh, mã, tên, giá, nút Thêm vào giỏ).</li>
-        <li>Khách chưa đăng nhập: nút Thêm vào giỏ trỏ tới <code>../dang-nhap.html</code>.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="../san-pham/dc01.html">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</a></li>
-        <li><a href="../san-pham/dc02.html">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</a></li>
-        <li><a href="../san-pham/dc03.html">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</a></li>
-        <li><a href="../san-pham/dc04.html">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</a></li>
-        <li><a href="day-chuyen-2.html">Trang 2</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- THANH CÔNG CỤ: số kết quả (trái) + sắp xếp (phải) -->
+    <div class="toolbar">
+        <p class="result-count">Hiển thị 1–4 trong 6 sản phẩm</p>
+        <form name="frmSapXep" action="day-chuyen.html" method="get">
+            <select name="sapxep" class="input w-200">
+                <option value="moi" selected="selected">Mới nhất</option>
+                <option value="tang">Giá tăng dần</option>
+                <option value="giam">Giá giảm dần</option>
+            </select>
+            <input type="submit" class="btn" value="Sắp xếp" />
+        </form>
+        <div class="clear"></div>
+    </div>
 
+    <!-- LƯỚI SẢN PHẨM: 4 sản phẩm / trang, thẻ thứ 4 có class last -->
+    <div class="product">
+        <a class="product-img" href="../san-pham/dc01.html"><img src="../images/products/dc01.svg" alt="Dây chuyền vàng 18K mặt kim cương giọt nước" title="Dây chuyền vàng 18K mặt kim cương giọt nước" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC01 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc01.html">Dây chuyền vàng 18K mặt kim cương giọt nước</a></h3>
+            <p class="p-price">19.750.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/dc02.html"><img src="../images/products/dc02.svg" alt="Dây chuyền ngọc trai Akoya vàng trắng 14K" title="Dây chuyền ngọc trai Akoya vàng trắng 14K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC02 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc02.html">Dây chuyền ngọc trai Akoya vàng trắng 14K</a></h3>
+            <p class="p-price">11.120.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/dc03.html"><img src="../images/products/dc03.svg" alt="Dây chuyền vàng hồng 14K mặt Sapphire" title="Dây chuyền vàng hồng 14K mặt Sapphire" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC03 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc03.html">Dây chuyền vàng hồng 14K mặt Sapphire</a></h3>
+            <p class="p-price">7.880.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product last">
+        <a class="product-img" href="../san-pham/dc04.html"><img src="../images/products/dc04.svg" alt="Dây chuyền bạc 925 mặt trăng đính CZ" title="Dây chuyền bạc 925 mặt trăng đính CZ" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC04 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc04.html">Dây chuyền bạc 925 mặt trăng đính CZ</a></h3>
+            <p class="p-price">750.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../dang-nhap.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <!-- PHÂN TRANG -->
+    <div class="pagination">
+        <span class="disabled">&laquo;</span>
+        <span class="current">1</span>
+        <a href="day-chuyen-2.html">2</a>
+        <a href="day-chuyen-2.html">&raquo;</a>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

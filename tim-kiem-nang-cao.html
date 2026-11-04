@@ -63,25 +63,60 @@
 <div class="container">
     <h1 class="page-title">Tìm kiếm nâng cao</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV2 — Sản phẩm & Tìm kiếm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Form tìm NÂNG CAO kết hợp nhiều tiêu chí trong MỘT lần bấm: tên sản phẩm (text), loại (<code>&lt;select&gt;</code>), giá từ – đến (2 ô hoặc select khoảng giá).</li>
-        <li>Ví dụ: tên chứa <b>"vàng"</b>, loại <b>Tất cả</b>, giá <b>5.000.000 ₫ – 10.000.000 ₫</b> → 7 sản phẩm, trang 1/2: <b>NH02, NH03, NH04, DC03</b>.</li>
-        <li>Form đặt sẵn giá trị đã chọn (value, selected); kết quả có phân trang.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="san-pham/nh02.html">NH02 - Nhẫn vàng 18K đính đá Ruby</a></li>
-        <li><a href="san-pham/nh03.html">NH03 - Nhẫn cưới trơn vàng 18K</a></li>
-        <li><a href="san-pham/nh04.html">NH04 - Nhẫn vàng hồng 14K đính Sapphire</a></li>
-        <li><a href="san-pham/dc03.html">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</a></li>
-        <li><a href="tim-kiem-nang-cao-2.html">Trang 2</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- FORM: tên + chất liệu + loại + khoảng giá, tìm trong MỘT lần bấm -->
+    <div class="panel">
+        <form name="frmTimNangCao" action="tim-kiem-nang-cao-ket-qua.html" method="get">
+            <table class="form-table" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="form-label">Tên sản phẩm</td>
+                    <td><input type="text" name="ten" value="" placeholder="Gõ tên, ví dụ: nhẫn, dây chuyền..." class="input w-400" /></td>
+                </tr>
+                <tr>
+                    <td class="form-label">Chất liệu</td>
+                    <td>
+                        <select name="chatlieu" class="input w-300">
+                            <option value="" selected="selected">Tất cả chất liệu</option>
+                            <option value="vang">Vàng (tất cả loại vàng)</option>
+                            <option value="vang18">Vàng 18K</option>
+                            <option value="vang24">Vàng 24K</option>
+                            <option value="vangtrang">Vàng trắng</option>
+                            <option value="vanghong">Vàng hồng</option>
+                            <option value="bac">Bạc 925</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">Loại sản phẩm</td>
+                    <td>
+                        <select name="loai" class="input w-300">
+                            <option value="" selected="selected">Tất cả loại</option>
+                            <option value="NH">Nhẫn</option>
+                            <option value="DC">Dây chuyền</option>
+                            <option value="BT">Bông tai</option>
+                            <option value="VT">Vòng tay</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">Khoảng giá (₫)</td>
+                    <td>
+                        <input type="text" name="giatu" value="" placeholder="Từ" class="input w-150" />
+                        &nbsp;đến&nbsp;
+                        <input type="text" name="giaden" value="" placeholder="Đến" class="input w-150" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" class="btn" value="Tìm kiếm" />
+                        <input type="reset" class="btn btn-outline" value="Nhập lại" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
+    <div class="alert alert-info">Nhập một hoặc nhiều tiêu chí rồi bấm <b>Tìm kiếm</b> để xem kết quả. Có thể kết hợp tên, chất liệu, loại và khoảng giá trong cùng một lần tìm.</div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->
