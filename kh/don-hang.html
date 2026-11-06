@@ -9,118 +9,79 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng | Barem: II.4 - Xem lại đơn hàng đã mua -->
-
-<!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
 <div id="topbar">
     <div class="container">
         <div class="left">Miễn phí giao hàng toàn quốc<span class="sep">|</span>Hotline: 1900 6868</div>
-        <div class="right"><a href="../dang-nhap.html">Đăng nhập</a><span class="sep">|</span><a href="../dang-ky.html">Đăng ký</a></div>
+        <div class="right">Xin chào, <b>Nguyễn Thị Lan</b><span class="sep">|</span><a href="tai-khoan.html">Tài khoản của tôi</a><span class="sep">|</span><a href="don-hang.html">Đơn hàng đã mua</a><span class="sep">|</span><a href="../index.html">Đăng xuất</a></div>
         <div class="clear"></div>
     </div>
 </div>
-
 <div id="header">
     <div class="container">
-        <div id="logo">
-            <a href="../index.html" title="Về trang chủ">
-                <span class="logo-name">AURELIA</span>
-                <span class="logo-sub">FINE JEWELRY</span>
-            </a>
-        </div>
+        <div id="logo"><a href="index.html" title="Về trang chủ"><span class="logo-name">AURELIA</span><span class="logo-sub">FINE JEWELRY</span></a></div>
         <div id="search">
-            <form name="frmSearch" action="../tim-kiem.html" method="get">
+            <form name="frmSearch" action="tim-kiem.html" method="get">
                 <input type="text" name="q" class="input" value="" placeholder="Tìm theo tên sản phẩm..." />
                 <input type="submit" class="btn" value="Tìm" />
-                <a class="search-more" href="../tim-kiem-nang-cao.html">Tìm nâng cao</a>
+                <a class="search-more" href="tim-kiem-nang-cao.html">Tìm nâng cao</a>
             </form>
         </div>
-        <div id="cart">
-            <a href="../dang-nhap.html" title="Vui lòng đăng nhập để dùng giỏ hàng">Giỏ hàng <span class="count">0</span></a>
-        </div>
+        <div id="cart"><a href="gio-hang.html" title="Xem giỏ hàng">Giỏ hàng <span class="count">3</span></a></div>
         <div class="clear"></div>
     </div>
 </div>
-
 <div id="menu">
     <div class="container">
         <ul>
-            <li><a href="../index.html">Trang chủ</a></li>
-            <li><a href="../danh-muc/nhan.html">Nhẫn</a></li>
-            <li><a href="../danh-muc/day-chuyen.html">Dây chuyền</a></li>
-            <li><a href="../danh-muc/bong-tai.html">Bông tai</a></li>
-            <li><a href="../danh-muc/vong-tay.html">Vòng tay</a></li>
-            <li><a href="../tim-kiem-nang-cao.html">Tìm nâng cao</a></li>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="danh-muc/nhan.html">Nhẫn</a></li>
+            <li><a href="danh-muc/day-chuyen.html">Dây chuyền</a></li>
+            <li><a href="danh-muc/bong-tai.html">Bông tai</a></li>
+            <li><a href="danh-muc/vong-tay.html">Vòng tay</a></li>
+            <li><a href="tim-kiem-nang-cao.html">Tìm nâng cao</a></li>
         </ul>
     </div>
 </div>
-<!-- ============ HẾT HEADER ============ -->
-
 <div class="container">
-    <p class="breadcrumb"><a href="../index.html">Trang chủ</a> / Đơn hàng đã mua</p>
-</div>
-
-<div class="container">
+    <p class="breadcrumb"><a href="index.html">Trang chủ</a> / Đơn hàng đã mua</p>
     <h1 class="page-title">Đơn hàng đã mua</h1>
-
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Danh sách đơn của Nguyễn Thị Lan: <b>DH0001</b> (02/10/2026, Đã giao, 7.940.000 ₫); <b>DH0004</b> (21/10/2026, Đã xử lý, 1.850.000 ₫); <b>DH0008</b> (30/10/2026, Mới đặt, 25.890.000 ₫).</li>
-        <li>Cột: mã đơn, ngày đặt, số sản phẩm, tổng tiền, tình trạng (<code>.badge</code>), nút Xem chi tiết.</li>
-        <li>Bố cục 2 cột có menu tài khoản bên trái giống trang tai-khoan.html.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="don-hang-dh0001.html">Chi tiết DH0001</a></li>
-        <li><a href="don-hang-dh0004.html">Chi tiết DH0004</a></li>
-        <li><a href="don-hang-dh0008.html">Chi tiết DH0008</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<div class="sidebar">
+<div class="side-menu">
+<h3>Tài khoản</h3>
+<a href="tai-khoan.html">Thông tin cá nhân</a>
+<a href="tai-khoan-sua.html">Sửa thông tin</a>
+<a class="active" href="don-hang.html">Đơn hàng đã mua</a>
+<a href="../index.html">Đăng xuất</a>
 </div>
-
 </div>
-
-<!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->
+<div class="main">
+<div class="panel">
+<h2>Lịch sử mua hàng</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+<tr><th>Mã đơn</th><th>Ngày đặt</th><th class="num">Tổng tiền</th><th>Thanh toán</th><th>Tình trạng</th><th>Thao tác</th></tr>
+<tr><td>DH0008</td><td>30/10/2026</td><td class="num">25.890.000 ₫</td><td>Tiền mặt khi nhận hàng</td><td><span class="badge badge-new">Mới đặt</span></td><td><a class="btn btn-small btn-outline" href="don-hang-dh0008.html">Xem</a></td></tr>
+<tr><td>DH0004</td><td>21/10/2026</td><td class="num">1.850.000 ₫</td><td>Tiền mặt khi nhận hàng</td><td><span class="badge badge-processing">Đã xử lý</span></td><td><a class="btn btn-small btn-outline" href="don-hang-dh0004.html">Xem</a></td></tr>
+<tr><td>DH0001</td><td>02/10/2026</td><td class="num">7.940.000 ₫</td><td>Tiền mặt khi nhận hàng</td><td><span class="badge badge-done">Đã giao</span></td><td><a class="btn btn-small btn-outline" href="don-hang-dh0001.html">Xem</a></td></tr>
+</table>
+</div>
+</div>
+<div class="clear"></div>
+</div>
 <div id="footer">
     <div class="container">
-        <div class="footer-col">
-            <span class="footer-logo">AURELIA</span>
-            <p>Trang sức vàng, bạc, kim cương và đá quý được chế tác tinh xảo, kiểm định chất lượng, bảo hành trọn đời.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Danh mục</h4>
-            <ul>
-                    <li><a href="../danh-muc/nhan.html">Nhẫn</a></li>
-                    <li><a href="../danh-muc/day-chuyen.html">Dây chuyền</a></li>
-                    <li><a href="../danh-muc/bong-tai.html">Bông tai</a></li>
-                    <li><a href="../danh-muc/vong-tay.html">Vòng tay</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Tài khoản</h4>
-            <ul>
-                    <li><a href="../dang-nhap.html">Đăng nhập</a></li>
-                    <li><a href="../dang-ky.html">Đăng ký tài khoản</a></li>
-                    <li><a href="../tim-kiem-nang-cao.html">Tìm kiếm nâng cao</a></li>
-            </ul>
-        </div>
-        <div class="footer-col last">
-            <h4>Liên hệ</h4>
-            <ul>
-                <li>273 An Dương Vương, Phường 3, Quận 5, TP. HCM</li>
-                <li>Hotline: 1900 6868</li>
-                <li>Email: <a href="mailto:hotro@aurelia.example">hotro@aurelia.example</a></li>
-            </ul>
-        </div>
+        <div class="footer-col"><span class="footer-logo">AURELIA</span>
+            <p>Trang sức vàng, bạc, kim cương và đá quý được chế tác tinh xảo, kiểm định chất lượng, bảo hành trọn đời.</p></div>
+        <div class="footer-col"><h4>Danh mục</h4><ul><li><a href="danh-muc/nhan.html">Nhẫn</a></li><li><a href="danh-muc/day-chuyen.html">Dây chuyền</a></li><li><a href="danh-muc/bong-tai.html">Bông tai</a></li><li><a href="danh-muc/vong-tay.html">Vòng tay</a></li></ul></div>
+        <div class="footer-col"><h4>Tài khoản</h4><ul>
+            <li><a href="tai-khoan.html">Tài khoản của tôi</a></li>
+            <li><a href="don-hang.html">Đơn hàng đã mua</a></li>
+            <li><a href="gio-hang.html">Giỏ hàng</a></li></ul></div>
+        <div class="footer-col last"><h4>Liên hệ</h4><ul>
+            <li>273 An Dương Vương, Phường 3, Quận 5, TP. HCM</li><li>Hotline: 1900 6868</li>
+            <li>Email: <a href="mailto:hotro@aurelia.example">hotro@aurelia.example</a></li></ul></div>
         <div class="clear"></div>
-        <div class="copyright">
-            Đồ án học phần Lập trình web và ứng dụng — Nhóm 1 — Khoa CNTT, Trường Đại học Sài Gòn, 2026
-        </div>
+        <div class="copyright">Đồ án học phần Lập trình web và ứng dụng — Nhóm 1 — Khoa CNTT, Trường Đại học Sài Gòn, 2026</div>
     </div>
 </div>
-<!-- ============ HẾT FOOTER ============ -->
-
 </body>
 </html>
