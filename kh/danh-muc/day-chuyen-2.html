@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng | Barem: II.3 - Chọn mua từ trang theo loại -->
+<!-- Bản dành cho thành viên đã đăng nhập (sao chép từ trang khách) -->
 
 <!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
 <div id="topbar">
@@ -63,25 +63,51 @@
 <div class="container">
     <h1 class="page-title">Dây chuyền - Trang 2</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>BẢN THÀNH VIÊN: sao chép <b>danh-muc/day-chuyen-2.html</b> của TV2, giữ header thành viên của file này, sửa đường dẫn cho đúng thư mục.</li>
-        <li>Trang 2/2 của loại <b>Dây chuyền</b> (6 sản phẩm, 4 sản phẩm/trang): hiển thị <b>DC05, DC06</b>.</li>
-        <li>Thanh <code>.toolbar</code>: số kết quả + ô sắp xếp; dưới cùng là thanh <code>.pagination</code> (trang hiện tại dùng <code>span.current</code>).</li>
-        <li>Thẻ sản phẩm dùng đúng mẫu <code>.product</code> như trang chủ (ảnh, mã, tên, giá, nút Thêm vào giỏ).</li>
-        <li>Nút <b>Thêm vào giỏ</b> trỏ tới <code>../gio-hang.html</code> (barem II.3: chọn mua từ trang hiển thị theo loại).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="../san-pham/dc05.html">DC05 - Dây chuyền vàng 24K kiểu Ý</a></li>
-        <li><a href="../san-pham/dc06.html">DC06 - Dây chuyền Ruby vàng trắng 18K</a></li>
-        <li><a href="day-chuyen.html">Trang 1</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- THANH CÔNG CỤ: số kết quả (trái) + sắp xếp (phải) -->
+    <div class="toolbar">
+        <p class="result-count">Hiển thị 5–6 trong 6 sản phẩm</p>
+        <form name="frmSapXep" action="day-chuyen-2.html" method="get">
+            <select name="sapxep" class="input w-200">
+                <option value="moi" selected="selected">Mới nhất</option>
+                <option value="tang">Giá tăng dần</option>
+                <option value="giam">Giá giảm dần</option>
+            </select>
+            <input type="submit" class="btn" value="Sắp xếp" />
+        </form>
+        <div class="clear"></div>
+    </div>
 
+    <!-- LƯỚI SẢN PHẨM: 4 sản phẩm / trang, thẻ thứ 4 có class last -->
+    <div class="product">
+        <span class="tag tag-sale">Sắp hết</span>
+        <a class="product-img" href="../san-pham/dc05.html"><img src="../../images/products/dc05.svg" alt="Dây chuyền vàng 24K kiểu Ý" title="Dây chuyền vàng 24K kiểu Ý" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC05 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc05.html">Dây chuyền vàng 24K kiểu Ý</a></h3>
+            <p class="p-price">12.540.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/dc06.html"><img src="../../images/products/dc06.svg" alt="Dây chuyền Ruby vàng trắng 18K" title="Dây chuyền Ruby vàng trắng 18K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC06 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc06.html">Dây chuyền Ruby vàng trắng 18K</a></h3>
+            <p class="p-price">12.120.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <!-- PHÂN TRANG -->
+    <div class="pagination">
+        <a href="day-chuyen.html">&laquo;</a>
+        <a href="day-chuyen.html">1</a>
+        <span class="current">2</span>
+        <span class="disabled">&raquo;</span>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

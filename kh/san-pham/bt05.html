@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng | Barem: II.3 - Chọn mua từ trang chi tiết -->
+<!-- Bản dành cho thành viên đã đăng nhập (sao chép từ trang khách) -->
 
 <!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
 <div id="topbar">
@@ -61,25 +61,92 @@
 </div>
 
 <div class="container">
-    <h1 class="page-title">Bông tai Emerald vàng 18K dáng dài</h1>
+    <!-- CỘT TRÁI: ảnh lớn -->
+    <div class="detail-img">
+        <img src="../../images/products/bt05.svg" alt="Bông tai Emerald vàng 18K dáng dài" title="Bông tai Emerald vàng 18K dáng dài" />
+    </div>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>BẢN THÀNH VIÊN: sao chép <b>san-pham/bt05.html</b> của TV2, giữ header thành viên.</li>
-        <li>Ảnh lớn <code>images/products/bt05.svg</code> (hoặc ảnh thật), tên, mã <b>BT05</b>, loại <b>Bông tai</b>, giá <b>11.070.000 ₫</b>.</li>
-        <li>Bảng thông số <code>.spec-table</code>: chất liệu (Vàng 18K), đá (Emerald (ngọc lục bảo)), trọng lượng (3.1 g), tình trạng (còn 3 sản phẩm).</li>
-        <li>Mô tả sản phẩm, chính sách bảo hành; ô chọn số lượng + nút Thêm vào giỏ; 4 sản phẩm cùng loại bên dưới.</li>
-        <li>Nút <b>Thêm vào giỏ</b> trỏ tới <code>../gio-hang.html</code> (barem II.3: chọn mua từ trang chi tiết).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="../danh-muc/bong-tai.html">Quay lại danh mục Bông tai</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- CỘT PHẢI: thông tin sản phẩm -->
+    <div class="detail-info">
+        <p class="p-code">BT05 · Bông tai</p>
+        <h1>Bông tai Emerald vàng 18K dáng dài</h1>
+        <p class="detail-price">11.070.000 ₫</p>
+        <p>Bông tai Emerald dáng dài vàng 18K, sang trọng cho những dịp đặc biệt.</p>
 
+        <table class="spec-table" cellspacing="0" cellpadding="0">
+            <tr><td class="spec-name">Mã sản phẩm</td><td>BT05</td></tr>
+            <tr><td class="spec-name">Loại</td><td><a href="../danh-muc/bong-tai.html">Bông tai</a></td></tr>
+            <tr><td class="spec-name">Chất liệu</td><td>Vàng 18K</td></tr>
+            <tr><td class="spec-name">Đá chủ</td><td>Emerald (ngọc lục bảo)</td></tr>
+            <tr><td class="spec-name">Trọng lượng</td><td>3.1 g</td></tr>
+            <tr><td class="spec-name">Tình trạng</td><td><span class="badge badge-low">Sắp hết – còn 3 sản phẩm</span></td></tr>
+        </table>
+
+        <!-- Chưa đăng nhập: bấm mua sẽ chuyển tới trang đăng nhập -->
+        <form name="frmMua" action="../gio-hang.html" method="get">
+            Số lượng:
+            <input type="text" name="soluong" value="1" class="input w-60" />
+            <input type="submit" class="btn btn-gold" value="Thêm vào giỏ" />
+        </form>
+        <p class="hint">Sản phẩm sẽ được thêm vào giỏ hàng của bạn.</p>
+    </div>
+
+    <div class="clear"></div>
+
+    <!-- MÔ TẢ CHI TIẾT -->
+    <div class="panel mt-30">
+        <h2>Mô tả sản phẩm</h2>
+        <p>Viên Emerald giọt nước treo trên móc vàng 18K, dài khoảng 3,5 cm. Tôn dáng cổ và gương mặt khi búi tóc.</p>
+        <p class="mt-10">Bảo hành trọn đời: miễn phí làm sạch, đánh bóng, gắn lại đá. Đổi size hoặc đổi mẫu miễn phí trong 7 ngày kể từ khi nhận hàng.</p>
+    </div>
+
+    <!-- SẢN PHẨM CÙNG LOẠI -->
+    <div class="section-title">
+        <h2>Sản phẩm cùng loại</h2>
+        <span class="line"></span>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/bt01.html"><img src="../../images/products/bt01.svg" alt="Bông tai kim cương nụ vàng trắng 18K" title="Bông tai kim cương nụ vàng trắng 18K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">BT01 · Bông tai</p>
+            <h3 class="p-name"><a href="../san-pham/bt01.html">Bông tai kim cương nụ vàng trắng 18K</a></h3>
+            <p class="p-price">13.230.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/bt02.html"><img src="../../images/products/bt02.svg" alt="Bông tai ngọc trai nước ngọt bạc 925" title="Bông tai ngọc trai nước ngọt bạc 925" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">BT02 · Bông tai</p>
+            <h3 class="p-name"><a href="../san-pham/bt02.html">Bông tai ngọc trai nước ngọt bạc 925</a></h3>
+            <p class="p-price">920.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/bt03.html"><img src="../../images/products/bt03.svg" alt="Bông tai vàng 18K giọt Ruby" title="Bông tai vàng 18K giọt Ruby" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">BT03 · Bông tai</p>
+            <h3 class="p-name"><a href="../san-pham/bt03.html">Bông tai vàng 18K giọt Ruby</a></h3>
+            <p class="p-price">7.960.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product last">
+        <a class="product-img" href="../san-pham/bt04.html"><img src="../../images/products/bt04.svg" alt="Bông tai vàng hồng 14K tròn Topaz" title="Bông tai vàng hồng 14K tròn Topaz" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">BT04 · Bông tai</p>
+            <h3 class="p-name"><a href="../san-pham/bt04.html">Bông tai vàng hồng 14K tròn Topaz</a></h3>
+            <p class="p-price">4.590.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

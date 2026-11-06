@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng | Barem: II.3 - Chọn mua từ trang theo loại -->
+<!-- Bản dành cho thành viên đã đăng nhập (sao chép từ trang khách) -->
 
 <!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
 <div id="topbar">
@@ -63,27 +63,71 @@
 <div class="container">
     <h1 class="page-title">Nhẫn</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>BẢN THÀNH VIÊN: sao chép <b>danh-muc/nhan.html</b> của TV2, giữ header thành viên của file này, sửa đường dẫn cho đúng thư mục.</li>
-        <li>Trang 1/2 của loại <b>Nhẫn</b> (6 sản phẩm, 4 sản phẩm/trang): hiển thị <b>NH01, NH02, NH03, NH04</b>.</li>
-        <li>Thanh <code>.toolbar</code>: số kết quả + ô sắp xếp; dưới cùng là thanh <code>.pagination</code> (trang hiện tại dùng <code>span.current</code>).</li>
-        <li>Thẻ sản phẩm dùng đúng mẫu <code>.product</code> như trang chủ (ảnh, mã, tên, giá, nút Thêm vào giỏ).</li>
-        <li>Nút <b>Thêm vào giỏ</b> trỏ tới <code>../gio-hang.html</code> (barem II.3: chọn mua từ trang hiển thị theo loại).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="../san-pham/nh01.html">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</a></li>
-        <li><a href="../san-pham/nh02.html">NH02 - Nhẫn vàng 18K đính đá Ruby</a></li>
-        <li><a href="../san-pham/nh03.html">NH03 - Nhẫn cưới trơn vàng 18K</a></li>
-        <li><a href="../san-pham/nh04.html">NH04 - Nhẫn vàng hồng 14K đính Sapphire</a></li>
-        <li><a href="nhan-2.html">Trang 2</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- THANH CÔNG CỤ: số kết quả (trái) + sắp xếp (phải) -->
+    <div class="toolbar">
+        <p class="result-count">Hiển thị 1–4 trong 6 sản phẩm</p>
+        <form name="frmSapXep" action="nhan.html" method="get">
+            <select name="sapxep" class="input w-200">
+                <option value="moi" selected="selected">Mới nhất</option>
+                <option value="tang">Giá tăng dần</option>
+                <option value="giam">Giá giảm dần</option>
+            </select>
+            <input type="submit" class="btn" value="Sắp xếp" />
+        </form>
+        <div class="clear"></div>
+    </div>
 
+    <!-- LƯỚI SẢN PHẨM: 4 sản phẩm / trang, thẻ thứ 4 có class last -->
+    <div class="product">
+        <span class="tag tag-sale">Sắp hết</span>
+        <a class="product-img" href="../san-pham/nh01.html"><img src="../../images/products/nh01.svg" alt="Nhẫn kim cương Solitaire vàng trắng 18K" title="Nhẫn kim cương Solitaire vàng trắng 18K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">NH01 · Nhẫn</p>
+            <h3 class="p-name"><a href="../san-pham/nh01.html">Nhẫn kim cương Solitaire vàng trắng 18K</a></h3>
+            <p class="p-price">24.050.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/nh02.html"><img src="../../images/products/nh02.svg" alt="Nhẫn vàng 18K đính đá Ruby" title="Nhẫn vàng 18K đính đá Ruby" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">NH02 · Nhẫn</p>
+            <h3 class="p-name"><a href="../san-pham/nh02.html">Nhẫn vàng 18K đính đá Ruby</a></h3>
+            <p class="p-price">9.360.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/nh03.html"><img src="../../images/products/nh03.svg" alt="Nhẫn cưới trơn vàng 18K" title="Nhẫn cưới trơn vàng 18K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">NH03 · Nhẫn</p>
+            <h3 class="p-name"><a href="../san-pham/nh03.html">Nhẫn cưới trơn vàng 18K</a></h3>
+            <p class="p-price">7.020.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product last">
+        <a class="product-img" href="../san-pham/nh04.html"><img src="../../images/products/nh04.svg" alt="Nhẫn vàng hồng 14K đính Sapphire" title="Nhẫn vàng hồng 14K đính Sapphire" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">NH04 · Nhẫn</p>
+            <h3 class="p-name"><a href="../san-pham/nh04.html">Nhẫn vàng hồng 14K đính Sapphire</a></h3>
+            <p class="p-price">8.840.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <!-- PHÂN TRANG -->
+    <div class="pagination">
+        <span class="disabled">&laquo;</span>
+        <span class="current">1</span>
+        <a href="nhan-2.html">2</a>
+        <a href="nhan-2.html">&raquo;</a>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

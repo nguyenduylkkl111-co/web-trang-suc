@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng | Barem: II.3 - Chọn mua từ trang chi tiết -->
+<!-- Bản dành cho thành viên đã đăng nhập (sao chép từ trang khách) -->
 
 <!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
 <div id="topbar">
@@ -61,25 +61,92 @@
 </div>
 
 <div class="container">
-    <h1 class="page-title">Dây chuyền vàng 24K kiểu Ý</h1>
+    <!-- CỘT TRÁI: ảnh lớn -->
+    <div class="detail-img">
+        <img src="../../images/products/dc05.svg" alt="Dây chuyền vàng 24K kiểu Ý" title="Dây chuyền vàng 24K kiểu Ý" />
+    </div>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>BẢN THÀNH VIÊN: sao chép <b>san-pham/dc05.html</b> của TV2, giữ header thành viên.</li>
-        <li>Ảnh lớn <code>images/products/dc05.svg</code> (hoặc ảnh thật), tên, mã <b>DC05</b>, loại <b>Dây chuyền</b>, giá <b>12.540.000 ₫</b>.</li>
-        <li>Bảng thông số <code>.spec-table</code>: chất liệu (Vàng 24K), đá (Không đính đá), trọng lượng (7.5 g), tình trạng (còn 1 sản phẩm).</li>
-        <li>Mô tả sản phẩm, chính sách bảo hành; ô chọn số lượng + nút Thêm vào giỏ; 4 sản phẩm cùng loại bên dưới.</li>
-        <li>Nút <b>Thêm vào giỏ</b> trỏ tới <code>../gio-hang.html</code> (barem II.3: chọn mua từ trang chi tiết).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="../danh-muc/day-chuyen.html">Quay lại danh mục Dây chuyền</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- CỘT PHẢI: thông tin sản phẩm -->
+    <div class="detail-info">
+        <p class="p-code">DC05 · Dây chuyền</p>
+        <h1>Dây chuyền vàng 24K kiểu Ý</h1>
+        <p class="detail-price">12.540.000 ₫</p>
+        <p>Dây vàng 24K kiểu Ý đan mắt xích, chắc tay, giữ giá trị cao.</p>
 
+        <table class="spec-table" cellspacing="0" cellpadding="0">
+            <tr><td class="spec-name">Mã sản phẩm</td><td>DC05</td></tr>
+            <tr><td class="spec-name">Loại</td><td><a href="../danh-muc/day-chuyen.html">Dây chuyền</a></td></tr>
+            <tr><td class="spec-name">Chất liệu</td><td>Vàng 24K</td></tr>
+            <tr><td class="spec-name">Đá chủ</td><td>Không đính đá</td></tr>
+            <tr><td class="spec-name">Trọng lượng</td><td>7.5 g</td></tr>
+            <tr><td class="spec-name">Tình trạng</td><td><span class="badge badge-low">Sắp hết – còn 1 sản phẩm</span></td></tr>
+        </table>
+
+        <!-- Chưa đăng nhập: bấm mua sẽ chuyển tới trang đăng nhập -->
+        <form name="frmMua" action="../gio-hang.html" method="get">
+            Số lượng:
+            <input type="text" name="soluong" value="1" class="input w-60" />
+            <input type="submit" class="btn btn-gold" value="Thêm vào giỏ" />
+        </form>
+        <p class="hint">Sản phẩm sẽ được thêm vào giỏ hàng của bạn.</p>
+    </div>
+
+    <div class="clear"></div>
+
+    <!-- MÔ TẢ CHI TIẾT -->
+    <div class="panel mt-30">
+        <h2>Mô tả sản phẩm</h2>
+        <p>Vàng 24K (99,99%) đan kiểu Ý mềm mại, ôm cổ. Phù hợp làm của hồi môn hoặc tích lũy, đi kèm giấy kiểm định tuổi vàng.</p>
+        <p class="mt-10">Bảo hành trọn đời: miễn phí làm sạch, đánh bóng, gắn lại đá. Đổi size hoặc đổi mẫu miễn phí trong 7 ngày kể từ khi nhận hàng.</p>
+    </div>
+
+    <!-- SẢN PHẨM CÙNG LOẠI -->
+    <div class="section-title">
+        <h2>Sản phẩm cùng loại</h2>
+        <span class="line"></span>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/dc01.html"><img src="../../images/products/dc01.svg" alt="Dây chuyền vàng 18K mặt kim cương giọt nước" title="Dây chuyền vàng 18K mặt kim cương giọt nước" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC01 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc01.html">Dây chuyền vàng 18K mặt kim cương giọt nước</a></h3>
+            <p class="p-price">19.750.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/dc02.html"><img src="../../images/products/dc02.svg" alt="Dây chuyền ngọc trai Akoya vàng trắng 14K" title="Dây chuyền ngọc trai Akoya vàng trắng 14K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC02 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc02.html">Dây chuyền ngọc trai Akoya vàng trắng 14K</a></h3>
+            <p class="p-price">11.120.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="../san-pham/dc03.html"><img src="../../images/products/dc03.svg" alt="Dây chuyền vàng hồng 14K mặt Sapphire" title="Dây chuyền vàng hồng 14K mặt Sapphire" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC03 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc03.html">Dây chuyền vàng hồng 14K mặt Sapphire</a></h3>
+            <p class="p-price">7.880.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product last">
+        <a class="product-img" href="../san-pham/dc04.html"><img src="../../images/products/dc04.svg" alt="Dây chuyền bạc 925 mặt trăng đính CZ" title="Dây chuyền bạc 925 mặt trăng đính CZ" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC04 · Dây chuyền</p>
+            <h3 class="p-name"><a href="../san-pham/dc04.html">Dây chuyền bạc 925 mặt trăng đính CZ</a></h3>
+            <p class="p-price">750.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="../gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng | Barem: II.2 - Tìm cơ bản (có phân trang) -->
+<!-- Bản dành cho thành viên đã đăng nhập (sao chép từ trang khách) -->
 
 <!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
 <div id="topbar">
@@ -63,26 +63,64 @@
 <div class="container">
     <h1 class="page-title">Kết quả tìm kiếm</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>BẢN THÀNH VIÊN: sao chép trang cùng tên của TV2, giữ header thành viên, nút Thêm vào giỏ → gio-hang.html.</li>
-        <li>Kết quả tìm CƠ BẢN theo tên, ví dụ từ khóa <b>"vàng 18K"</b> → 8 sản phẩm, trang 1/2: <b>NH02, NH03, NH06, DC01</b>.</li>
-        <li>Ghi rõ: Kết quả tìm kiếm cho "..." (n sản phẩm); ô tìm kiếm điền sẵn từ khóa; có phân trang.</li>
-        <li>Có link sang Tìm nâng cao.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="san-pham/nh02.html">NH02 - Nhẫn vàng 18K đính đá Ruby</a></li>
-        <li><a href="san-pham/nh03.html">NH03 - Nhẫn cưới trơn vàng 18K</a></li>
-        <li><a href="san-pham/nh06.html">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</a></li>
-        <li><a href="san-pham/dc01.html">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</a></li>
-        <li><a href="tim-kiem-2.html">Trang 2</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <div class="toolbar">
+        <p class="result-count">Tìm thấy <b>8</b> sản phẩm cho từ khóa “<b>vàng 18K</b>” — đang xem 1–4</p>
+        <form name="frmTimLai" action="tim-kiem.html" method="get">
+            <input type="text" name="q" value="vàng 18K" class="input w-200" />
+            <input type="submit" class="btn" value="Tìm lại" />
+        </form>
+        <div class="clear"></div>
+    </div>
+    <p class="mb-20 muted">Muốn lọc theo loại và khoảng giá? <a class="gold" href="tim-kiem-nang-cao.html">Dùng tìm kiếm nâng cao</a></p>
 
+    <div class="product">
+        <a class="product-img" href="san-pham/nh02.html"><img src="../images/products/nh02.svg" alt="Nhẫn vàng 18K đính đá Ruby" title="Nhẫn vàng 18K đính đá Ruby" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">NH02 · Nhẫn</p>
+            <h3 class="p-name"><a href="san-pham/nh02.html">Nhẫn vàng 18K đính đá Ruby</a></h3>
+            <p class="p-price">9.360.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="san-pham/nh03.html"><img src="../images/products/nh03.svg" alt="Nhẫn cưới trơn vàng 18K" title="Nhẫn cưới trơn vàng 18K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">NH03 · Nhẫn</p>
+            <h3 class="p-name"><a href="san-pham/nh03.html">Nhẫn cưới trơn vàng 18K</a></h3>
+            <p class="p-price">7.020.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="san-pham/nh06.html"><img src="../images/products/nh06.svg" alt="Nhẫn Emerald vàng 18K viền kim cương tấm" title="Nhẫn Emerald vàng 18K viền kim cương tấm" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">NH06 · Nhẫn</p>
+            <h3 class="p-name"><a href="san-pham/nh06.html">Nhẫn Emerald vàng 18K viền kim cương tấm</a></h3>
+            <p class="p-price">16.380.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product last">
+        <a class="product-img" href="san-pham/dc01.html"><img src="../images/products/dc01.svg" alt="Dây chuyền vàng 18K mặt kim cương giọt nước" title="Dây chuyền vàng 18K mặt kim cương giọt nước" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">DC01 · Dây chuyền</p>
+            <h3 class="p-name"><a href="san-pham/dc01.html">Dây chuyền vàng 18K mặt kim cương giọt nước</a></h3>
+            <p class="p-price">19.750.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="pagination">
+        <span class="disabled">&laquo;</span>
+        <span class="current">1</span>
+        <a href="tim-kiem-2.html">2</a>
+        <a href="tim-kiem-2.html">&raquo;</a>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->

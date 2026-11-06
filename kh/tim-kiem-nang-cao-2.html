@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng | Barem: II.2 - Tìm nâng cao (có phân trang) -->
+<!-- Bản dành cho thành viên đã đăng nhập (sao chép từ trang khách) -->
 
 <!-- ============ HEADER (giống nhau ở mọi trang) ============ -->
 <div id="topbar">
@@ -57,31 +57,106 @@
 <!-- ============ HẾT HEADER ============ -->
 
 <div class="container">
-    <p class="breadcrumb"><a href="index.html">Trang chủ</a> / Tìm kiếm nâng cao</p>
+    <p class="breadcrumb"><a href="index.html">Trang chủ</a> / <a href="tim-kiem-nang-cao.html">Tìm kiếm nâng cao</a> / Kết quả</p>
 </div>
 
 <div class="container">
-    <h1 class="page-title">Tìm kiếm nâng cao - Trang 2</h1>
+    <h1 class="page-title">Kết quả tìm kiếm nâng cao - Trang 2</h1>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV3 — Giỏ hàng & Đơn hàng</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>BẢN THÀNH VIÊN: sao chép trang cùng tên của TV2, giữ header thành viên, nút Thêm vào giỏ → gio-hang.html.</li>
-        <li>Form tìm NÂNG CAO kết hợp nhiều tiêu chí trong MỘT lần bấm: tên sản phẩm (text), loại (<code>&lt;select&gt;</code>), giá từ – đến (2 ô hoặc select khoảng giá).</li>
-        <li>Ví dụ: tên chứa <b>"vàng"</b>, loại <b>Tất cả</b>, giá <b>5.000.000 ₫ – 10.000.000 ₫</b> → 7 sản phẩm, trang 2/2: <b>BT03, VT04, VT05</b>.</li>
-        <li>Form đặt sẵn giá trị đã chọn (value, selected); kết quả có phân trang.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="san-pham/bt03.html">BT03 - Bông tai vàng 18K giọt Ruby</a></li>
-        <li><a href="san-pham/vt04.html">VT04 - Vòng tay vàng hồng 14K đính Sapphire</a></li>
-        <li><a href="san-pham/vt05.html">VT05 - Lắc tay ngọc trai vàng trắng 14K</a></li>
-        <li><a href="tim-kiem-nang-cao.html">Trang 1</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
-</div>
+    <!-- FORM: tên + chất liệu + loại + khoảng giá, tìm trong MỘT lần bấm -->
+    <div class="panel">
+        <form name="frmTimNangCao" action="tim-kiem-nang-cao-ket-qua.html" method="get">
+            <table class="form-table" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="form-label">Tên sản phẩm</td>
+                    <td><input type="text" name="ten" value="" placeholder="Gõ tên, ví dụ: nhẫn, dây chuyền..." class="input w-400" /></td>
+                </tr>
+                <tr>
+                    <td class="form-label">Chất liệu</td>
+                    <td>
+                        <select name="chatlieu" class="input w-300">
+                            <option value="">Tất cả chất liệu</option>
+                            <option value="vang" selected="selected">Vàng (tất cả loại vàng)</option>
+                            <option value="vang18">Vàng 18K</option>
+                            <option value="vang24">Vàng 24K</option>
+                            <option value="vangtrang">Vàng trắng</option>
+                            <option value="vanghong">Vàng hồng</option>
+                            <option value="bac">Bạc 925</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">Loại sản phẩm</td>
+                    <td>
+                        <select name="loai" class="input w-300">
+                            <option value="" selected="selected">Tất cả loại</option>
+                            <option value="NH">Nhẫn</option>
+                            <option value="DC">Dây chuyền</option>
+                            <option value="BT">Bông tai</option>
+                            <option value="VT">Vòng tay</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label">Khoảng giá (₫)</td>
+                    <td>
+                        <input type="text" name="giatu" value="5000000" class="input w-150" />
+                        &nbsp;đến&nbsp;
+                        <input type="text" name="giaden" value="10000000" class="input w-150" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" class="btn" value="Tìm kiếm" />
+                        <input type="reset" class="btn btn-outline" value="Nhập lại" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
+    <!-- KẾT QUẢ -->
+    <p class="mb-20">Tìm thấy <b>7</b> sản phẩm chất liệu <b>Vàng</b>, thuộc <b>tất cả loại</b>, giá từ <b>5.000.000 ₫</b> đến <b>10.000.000 ₫</b> — đang xem 5–7.</p>
+
+    <div class="product">
+        <a class="product-img" href="san-pham/bt03.html"><img src="../images/products/bt03.svg" alt="Bông tai vàng 18K giọt Ruby" title="Bông tai vàng 18K giọt Ruby" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">BT03 · Bông tai</p>
+            <h3 class="p-name"><a href="san-pham/bt03.html">Bông tai vàng 18K giọt Ruby</a></h3>
+            <p class="p-price">7.960.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="san-pham/vt04.html"><img src="../images/products/vt04.svg" alt="Vòng tay vàng hồng 14K đính Sapphire" title="Vòng tay vàng hồng 14K đính Sapphire" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">VT04 · Vòng tay</p>
+            <h3 class="p-name"><a href="san-pham/vt04.html">Vòng tay vàng hồng 14K đính Sapphire</a></h3>
+            <p class="p-price">9.470.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <a class="product-img" href="san-pham/vt05.html"><img src="../images/products/vt05.svg" alt="Lắc tay ngọc trai vàng trắng 14K" title="Lắc tay ngọc trai vàng trắng 14K" width="280" height="280" /></a>
+        <div class="product-info">
+            <p class="p-code">VT05 · Vòng tay</p>
+            <h3 class="p-name"><a href="san-pham/vt05.html">Lắc tay ngọc trai vàng trắng 14K</a></h3>
+            <p class="p-price">7.810.000 ₫</p>
+            <a class="btn btn-small btn-block btn-outline" href="gio-hang.html">Thêm vào giỏ</a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="pagination">
+        <a href="tim-kiem-nang-cao-ket-qua.html">&laquo;</a>
+        <a href="tim-kiem-nang-cao-ket-qua.html">1</a>
+        <span class="current">2</span>
+        <span class="disabled">&raquo;</span>
+    </div>
 </div>
 
 <!-- ============ FOOTER (giống nhau ở mọi trang) ============ -->
