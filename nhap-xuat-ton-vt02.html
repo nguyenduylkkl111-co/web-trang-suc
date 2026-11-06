@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Nhập – xuất – tồn VT02 - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | Barem: I.8 - Nhập–xuất–tồn của 1 sản phẩm trong khoảng thời gian -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html">Tồn kho</a>
+    <a href="nhap-xuat-ton.html" class="active">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Nhập – xuất – tồn</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a> / VT02</p>
+
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Sản phẩm đang xem</div>
+        <input type="text" class="input w-500" value="VT02 - Vòng kiềng vàng 24K trơn" readonly="readonly" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Từ ngày</div>
+        <input type="text" class="input w-150" value="01/10/2026" readonly="readonly" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Đến ngày</div>
+        <input type="text" class="input w-150" value="30/10/2026" readonly="readonly" />
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="card">
+    <h2 class="card-title">Chọn sản phẩm khác</h2>
+    <p class="nxt-pick"><span class="nxt-loai">Nhẫn</span><a class="btn btn-small btn-outline" href="nhap-xuat-ton-nh01.html" title="Nhẫn kim cương Solitaire vàng trắng 18K">NH01</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-nh02.html" title="Nhẫn vàng 18K đính đá Ruby">NH02</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-nh03.html" title="Nhẫn cưới trơn vàng 18K">NH03</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-nh04.html" title="Nhẫn vàng hồng 14K đính Sapphire">NH04</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-nh05.html" title="Nhẫn bạc 925 đính đá CZ">NH05</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-nh06.html" title="Nhẫn Emerald vàng 18K viền kim cương tấm">NH06</a> </p>
+    <p class="nxt-pick"><span class="nxt-loai">Dây chuyền</span><a class="btn btn-small btn-outline" href="nhap-xuat-ton-dc01.html" title="Dây chuyền vàng 18K mặt kim cương giọt nước">DC01</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-dc02.html" title="Dây chuyền ngọc trai Akoya vàng trắng 14K">DC02</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-dc03.html" title="Dây chuyền vàng hồng 14K mặt Sapphire">DC03</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-dc04.html" title="Dây chuyền bạc 925 mặt trăng đính CZ">DC04</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-dc05.html" title="Dây chuyền vàng 24K kiểu Ý">DC05</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-dc06.html" title="Dây chuyền Ruby vàng trắng 18K">DC06</a> </p>
+    <p class="nxt-pick"><span class="nxt-loai">Bông tai</span><a class="btn btn-small btn-outline" href="nhap-xuat-ton-bt01.html" title="Bông tai kim cương nụ vàng trắng 18K">BT01</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-bt02.html" title="Bông tai ngọc trai nước ngọt bạc 925">BT02</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-bt03.html" title="Bông tai vàng 18K giọt Ruby">BT03</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-bt04.html" title="Bông tai vàng hồng 14K tròn Topaz">BT04</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-bt05.html" title="Bông tai Emerald vàng 18K dáng dài">BT05</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-bt06.html" title="Bông tai bạc 925 khoen tròn">BT06</a> </p>
+    <p class="nxt-pick"><span class="nxt-loai">Vòng tay</span><a class="btn btn-small btn-outline" href="nhap-xuat-ton-vt01.html" title="Lắc tay Tennis vàng 18K đính kim cương tấm">VT01</a> <a class="btn btn-small btn-gold" href="nhap-xuat-ton-vt02.html" title="Vòng kiềng vàng 24K trơn">VT02</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-vt03.html" title="Lắc tay bạc 925 charm trái tim">VT03</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-vt04.html" title="Vòng tay vàng hồng 14K đính Sapphire">VT04</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-vt05.html" title="Lắc tay ngọc trai vàng trắng 14K">VT05</a> <a class="btn btn-small btn-outline" href="nhap-xuat-ton-vt06.html" title="Vòng tay Ruby vàng 18K">VT06</a> </p>
+    <p class="tv5-note">Kỳ thống kê cố định: tháng 10/2026 (01/10 – 30/10). Bấm mã sản phẩm để xem nhập – xuất – tồn của sản phẩm đó.</p>
+</div>
+<div class="alert alert-info">Kết quả cho sản phẩm <b>VT02 - Vòng kiềng vàng 24K trơn</b>, từ <b>01/10/2026</b> đến <b>30/10/2026</b>.</div>
+<div class="stat-col"><div class="stat"><div class="stat-label">Tồn đầu kỳ</div><div class="stat-value">1</div></div></div>
+<div class="stat-col"><div class="stat"><div class="stat-label">Tổng nhập</div><div class="stat-value">4</div></div></div>
+<div class="stat-col"><div class="stat"><div class="stat-label">Tổng xuất</div><div class="stat-value">1</div></div></div>
+<div class="stat-col last"><div class="stat"><div class="stat-label">Tồn cuối kỳ</div><div class="stat-value">4</div></div></div>
+<div class="clear"></div>
+<p class="tv5-note">Tồn cuối = Tồn đầu + Nhập − Xuất = 1 + 4 − 1 = 4.</p>
+<div class="card">
+    <h2 class="card-title">Chi tiết nhập / xuất trong kỳ</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Ngày</th>
+        <th>Chứng từ</th>
+        <th>Diễn giải</th>
+        <th>Loại</th>
+        <th class="num">Số lượng</th>
+    </tr>
+    <tr>
+        <td>18/10/2026</td>
+        <td class="bold">PN004</td>
+        <td>Phiếu nhập hàng (hoàn thành), giá nhập 16.800.000 ₫</td>
+        <td><span class="badge badge-done">Nhập</span></td>
+        <td class="num">4</td>
+    </tr>
+    <tr>
+        <td>Trong kỳ</td>
+        <td>—</td>
+        <td>Bán tại cửa hàng</td>
+        <td><span class="badge badge-processing">Xuất</span></td>
+        <td class="num">1</td>
+    </tr>
+    <tr class="total">
+        <td>Tổng cộng</td>
+        <td></td>
+        <td>Nhập 4 · Xuất 1</td>
+        <td></td>
+        <td class="num"></td>
+    </tr>
+</table>
+</div>
+<div class="card">
+    <h2 class="card-title">Bảng nhập – xuất – tồn tất cả sản phẩm, tháng 10/2026 (01/10 – 30/10)</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã</th>
+        <th>Tên sản phẩm</th>
+        <th class="num">Tồn đầu 01/10</th>
+        <th class="num">Nhập</th>
+        <th class="num">Xuất</th>
+        <th class="num">Tồn cuối 30/10</th>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold"><a href="nhap-xuat-ton-nh01.html">NH01</a></td>
+        <td>Nhẫn kim cương Solitaire vàng trắng 18K</td>
+        <td class="num">3</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">2</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-nh02.html">NH02</a></td>
+        <td>Nhẫn vàng 18K đính đá Ruby</td>
+        <td class="num">8</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">7</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-nh03.html">NH03</a></td>
+        <td>Nhẫn cưới trơn vàng 18K</td>
+        <td class="num">17</td>
+        <td class="num">0</td>
+        <td class="num">3</td>
+        <td class="num">14</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-nh04.html">NH04</a></td>
+        <td>Nhẫn vàng hồng 14K đính Sapphire</td>
+        <td class="num">0</td>
+        <td class="num">6</td>
+        <td class="num">0</td>
+        <td class="num">6</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-nh05.html">NH05</a></td>
+        <td>Nhẫn bạc 925 đính đá CZ</td>
+        <td class="num">29</td>
+        <td class="num">0</td>
+        <td class="num">4</td>
+        <td class="num">25</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-nh06.html">NH06</a></td>
+        <td>Nhẫn Emerald vàng 18K viền kim cương tấm</td>
+        <td class="num">2</td>
+        <td class="num">4</td>
+        <td class="num">2</td>
+        <td class="num">4</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-dc01.html">DC01</a></td>
+        <td>Dây chuyền vàng 18K mặt kim cương giọt nước</td>
+        <td class="num">5</td>
+        <td class="num">0</td>
+        <td class="num">0</td>
+        <td class="num">5</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-dc02.html">DC02</a></td>
+        <td>Dây chuyền ngọc trai Akoya vàng trắng 14K</td>
+        <td class="num">1</td>
+        <td class="num">6</td>
+        <td class="num">1</td>
+        <td class="num">6</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-dc03.html">DC03</a></td>
+        <td>Dây chuyền vàng hồng 14K mặt Sapphire</td>
+        <td class="num">4</td>
+        <td class="num">8</td>
+        <td class="num">3</td>
+        <td class="num">9</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-dc04.html">DC04</a></td>
+        <td>Dây chuyền bạc 925 mặt trăng đính CZ</td>
+        <td class="num">31</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">30</td>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold"><a href="nhap-xuat-ton-dc05.html">DC05</a></td>
+        <td>Dây chuyền vàng 24K kiểu Ý</td>
+        <td class="num">0</td>
+        <td class="num">2</td>
+        <td class="num">1</td>
+        <td class="num">1</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-dc06.html">DC06</a></td>
+        <td>Dây chuyền Ruby vàng trắng 18K</td>
+        <td class="num">2</td>
+        <td class="num">5</td>
+        <td class="num">2</td>
+        <td class="num">5</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-bt01.html">BT01</a></td>
+        <td>Bông tai kim cương nụ vàng trắng 18K</td>
+        <td class="num">7</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">6</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-bt02.html">BT02</a></td>
+        <td>Bông tai ngọc trai nước ngọt bạc 925</td>
+        <td class="num">26</td>
+        <td class="num">0</td>
+        <td class="num">4</td>
+        <td class="num">22</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-bt03.html">BT03</a></td>
+        <td>Bông tai vàng 18K giọt Ruby</td>
+        <td class="num">2</td>
+        <td class="num">8</td>
+        <td class="num">2</td>
+        <td class="num">8</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-bt04.html">BT04</a></td>
+        <td>Bông tai vàng hồng 14K tròn Topaz</td>
+        <td class="num">0</td>
+        <td class="num">10</td>
+        <td class="num">0</td>
+        <td class="num">10</td>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold"><a href="nhap-xuat-ton-bt05.html">BT05</a></td>
+        <td>Bông tai Emerald vàng 18K dáng dài</td>
+        <td class="num">4</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">3</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-bt06.html">BT06</a></td>
+        <td>Bông tai bạc 925 khoen tròn</td>
+        <td class="num">39</td>
+        <td class="num">0</td>
+        <td class="num">4</td>
+        <td class="num">35</td>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold"><a href="nhap-xuat-ton-vt01.html">VT01</a></td>
+        <td>Lắc tay Tennis vàng 18K đính kim cương tấm</td>
+        <td class="num">0</td>
+        <td class="num">2</td>
+        <td class="num">0</td>
+        <td class="num">2</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-vt02.html">VT02</a></td>
+        <td>Vòng kiềng vàng 24K trơn</td>
+        <td class="num">1</td>
+        <td class="num">4</td>
+        <td class="num">1</td>
+        <td class="num">4</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-vt03.html">VT03</a></td>
+        <td>Lắc tay bạc 925 charm trái tim</td>
+        <td class="num">21</td>
+        <td class="num">0</td>
+        <td class="num">3</td>
+        <td class="num">18</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-vt04.html">VT04</a></td>
+        <td>Vòng tay vàng hồng 14K đính Sapphire</td>
+        <td class="num">7</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">6</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-vt05.html">VT05</a></td>
+        <td>Lắc tay ngọc trai vàng trắng 14K</td>
+        <td class="num">8</td>
+        <td class="num">0</td>
+        <td class="num">1</td>
+        <td class="num">7</td>
+    </tr>
+    <tr>
+        <td class="bold"><a href="nhap-xuat-ton-vt06.html">VT06</a></td>
+        <td>Vòng tay Ruby vàng 18K</td>
+        <td class="num">7</td>
+        <td class="num">0</td>
+        <td class="num">2</td>
+        <td class="num">5</td>
+    </tr>
+</table>
+    <p class="tv5-note">Nhập tính theo phiếu đã hoàn thành (PN003, PN004); PN005 chưa hoàn thành nên chưa tính. Xuất gồm đơn không bị hủy và hàng bán tại cửa hàng.</p>
+</div>
+<p><a class="btn btn-outline" href="ton-kho.html">Quay lại tồn kho</a></p>
+</div>
+
+</body>
+</html>

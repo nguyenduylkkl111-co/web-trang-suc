@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Thêm phiếu nhập - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | Barem: I.5 - Thêm phiếu nhập -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html" class="active">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html">Tồn kho</a>
+    <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Thêm phiếu nhập</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="nhap-hang.html">Phiếu nhập</a> / Thêm</p>
+
+<div class="alert alert-info">Phiếu nhập chỉ gồm <b>ngày nhập</b>, <b>giá nhập</b> và <b>số lượng</b> của từng sản phẩm (không quản lý nhà cung cấp).</div>
+<form name="frmThemPhieu" action="nhap-hang.html" method="get">
+<div class="card">
+    <h2 class="card-title">Thông tin phiếu</h2>
+    <table class="form-table" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="form-label">Ngày nhập <span class="req">*</span></td>
+            <td><input type="text" name="ngaynhap" class="input w-200" value="30/10/2026" /><span class="hint">Định dạng dd/mm/yyyy</span></td>
+        </tr>
+        <tr>
+            <td class="form-label">Trạng thái</td>
+            <td><span class="badge badge-draft">Chưa hoàn thành</span></td>
+        </tr>
+    </table>
+</div>
+<div class="card">
+    <h2 class="card-title">Chi tiết hàng nhập</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>STT</th>
+        <th>Sản phẩm</th>
+        <th class="num">Giá nhập (₫)</th>
+        <th class="num">Số lượng</th>
+        <th class="num">Thành tiền</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><select name="sp1" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia1" class="input w-150 num-input" value="" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl1" class="input w-60 num-input" value="" /></td>
+        <td class="num">0 ₫</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><select name="sp2" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia2" class="input w-150 num-input" value="" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl2" class="input w-60 num-input" value="" /></td>
+        <td class="num">0 ₫</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><select name="sp3" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia3" class="input w-150 num-input" value="" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl3" class="input w-60 num-input" value="" /></td>
+        <td class="num">0 ₫</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><select name="sp4" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia4" class="input w-150 num-input" value="" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl4" class="input w-60 num-input" value="" /></td>
+        <td class="num">0 ₫</td>
+    </tr>
+</table>
+    <p class="mt-10"><a class="btn btn-small btn-outline" href="nhap-hang-them.html">+ Thêm dòng</a></p>
+    <p class="tv5-total">Tổng cộng: <b>0 ₫</b></p>
+</div>
+<div class="form-actions">
+    <input type="submit" name="act" class="btn" value="Lưu tạm" />
+    <input type="submit" name="act" class="btn btn-gold" value="Hoàn thành phiếu" />
+    <a class="btn btn-outline" href="nhap-hang.html">Hủy</a>
+</div>
+</form>
+</div>
+
+</body>
+</html>
