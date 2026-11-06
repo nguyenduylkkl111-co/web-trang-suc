@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV3 Demo - Jewelry Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/demo-data.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">JEWELRY <span>SHOP</span></a>
+    <nav>
+      <a href="index.html">Trang chủ demo</a>
+      <a href="cart.html">Giỏ hàng</a>
+      <a href="orders.html">Đơn hàng</a>
+    </nav>
+    <div id="account-area" class="account-area"></div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">TV3 · CUSTOMER MODULE</p>
+      <h1>Trang thử nghiệm Cart, Checkout & Orders</h1>
+      <p>Bản demo độc lập để kiểm tra luồng khách hàng trước khi tích hợp với các thành viên khác.</p>
+      <div class="hero-actions">
+        <button class="button" id="seed-demo">Nạp dữ liệu mẫu</button>
+        <button class="button button-outline" id="login-demo">Đăng nhập tài khoản demo</button>
+        <button class="button button-light" id="reset-demo">Đặt lại dữ liệu demo</button>
+      </div>
+      <p id="demo-message" class="notice" aria-live="polite"></p>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <p class="eyebrow">PRODUCTS</p>
+        <h2>Sản phẩm mẫu</h2>
+      </div>
+      <a class="text-link" href="cart.html">Đi đến giỏ hàng →</a>
+    </section>
+    <div id="product-grid" class="product-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Jewelry Shop · TV3 standalone demo</p>
+  </footer>
+</body>
+</html>

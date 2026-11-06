@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh toán - Jewelry Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">JEWELRY <span>SHOP</span></a>
+    <nav>
+      <a href="cart.html">Giỏ hàng</a>
+      <a class="active" href="checkout.html">Thanh toán</a>
+      <a href="orders.html">Đơn hàng</a>
+    </nav>
+    <div id="account-area" class="account-area"></div>
+  </header>
+
+  <main class="container page">
+    <div class="page-heading">
+      <p class="eyebrow">CHECKOUT</p>
+      <h1>Thông tin thanh toán</h1>
+      <p>Nhập địa chỉ nhận hàng và chọn phương thức thanh toán.</p>
+    </div>
+    <div id="page-message" class="notice" aria-live="polite"></div>
+
+    <form id="checkout-form" class="checkout-layout">
+      <div class="checkout-main">
+        <section class="panel form-panel">
+          <h2>Địa chỉ giao hàng</h2>
+          <div id="saved-address-wrap" class="field">
+            <label for="saved-address">Chọn địa chỉ đã lưu</label>
+            <select id="saved-address">
+              <option value="">-- Nhập địa chỉ mới --</option>
+            </select>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="receiver">Người nhận *</label>
+              <input id="receiver" name="receiver" required maxlength="100" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="phone">Số điện thoại *</label>
+              <input id="phone" name="phone" required inputmode="tel" pattern="[0-9+ .-]{9,15}" autocomplete="tel">
+            </div>
+            <div class="field field-full">
+              <label for="address-line">Địa chỉ cụ thể *</label>
+              <input id="address-line" name="addressLine" required maxlength="200" placeholder="Số nhà, tên đường">
+            </div>
+            <div class="field">
+              <label for="ward">Phường / xã *</label>
+              <input id="ward" name="ward" required maxlength="100">
+            </div>
+            <div class="field">
+              <label for="district">Quận / huyện *</label>
+              <input id="district" name="district" required maxlength="100">
+            </div>
+            <div class="field field-full">
+              <label for="city">Tỉnh / thành phố *</label>
+              <input id="city" name="city" required maxlength="100">
+            </div>
+            <div class="field field-full">
+              <label for="note">Ghi chú (không bắt buộc)</label>
+              <textarea id="note" name="note" rows="3" maxlength="500" placeholder="Ví dụ: giao hàng giờ hành chính"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel form-panel">
+          <h2>Phương thức thanh toán</h2>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="COD" checked>
+            <span><strong>Thanh toán khi nhận hàng (COD)</strong><small>Thanh toán trực tiếp khi nhận được sản phẩm.</small></span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="BANK">
+            <span><strong>Chuyển khoản ngân hàng</strong><small>Thông tin chuyển khoản sẽ được hiển thị sau khi đặt hàng.</small></span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="ONLINE">
+            <span><strong>Thanh toán trực tuyến</strong><small>Mô phỏng lựa chọn thanh toán trực tuyến, chưa kết nối cổng thanh toán thật.</small></span>
+          </label>
+        </section>
+      </div>
+
+      <aside class="panel summary-panel">
+        <h2>Đơn hàng</h2>
+        <div id="checkout-items" class="checkout-items"></div>
+        <div class="summary-line"><span>Tạm tính</span><strong id="subtotal">0 ₫</strong></div>
+        <div class="summary-line"><span>Phí vận chuyển</span><strong id="shipping">0 ₫</strong></div>
+        <div class="summary-line total-line"><span>Tổng thanh toán</span><strong id="total">0 ₫</strong></div>
+        <button class="button button-full" type="submit">Xác nhận đặt hàng</button>
+        <a class="text-link centered" href="cart.html">Quay lại giỏ hàng</a>
+      </aside>
+    </form>
+  </main>
+
+  <footer class="site-footer"><p>© 2026 Jewelry Shop</p></footer>
+</body>
+</html>
