@@ -235,6 +235,27 @@ body.admin-login {
    ===================================================================== */
 
 /* ----- TV4: khách hàng, loại sản phẩm, sản phẩm ----- */
+.login-links {
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+}
 
+.login-demo {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #e6dccb;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+    color: #7d7166;
+}
+
+.login-foot {
+    margin-top: 24px;
+    font-size: 12px;
+    text-align: center;
+    color: #7d7166;
+}
 
 /* ----- TV5: nhập hàng, giá bán, đơn hàng, tồn kho ----- */
