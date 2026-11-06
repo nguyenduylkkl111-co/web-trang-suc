@@ -2,21 +2,16 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8" />
-<title>Xóa / ẩn sản phẩm - Quản trị | AURELIA Jewelry</title>
+<title>Xóa / Ẩn sản phẩm - Quản trị | AURELIA Jewelry</title>
 <meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
 <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
 <link rel="stylesheet" type="text/css" href="../css/common.css" />
 <link rel="stylesheet" type="text/css" href="../css/admin.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm | Barem: I.4 - Xóa / Ẩn sản phẩm -->
-
 <!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
 <div id="sidebar">
-    <a class="brand" href="index.html">
-        <span class="brand-name">AURELIA</span>
-        <span class="brand-sub">TRANG QUẢN TRỊ</span>
-    </a>
+    <a class="brand" href="index.html"><span class="brand-name">AURELIA</span><span class="brand-sub">TRANG QUẢN TRỊ</span></a>
     <div class="menu-title">Tổng quan</div>
     <a href="index.html">Bảng điều khiển</a>
     <div class="menu-title">Người dùng</div>
@@ -34,34 +29,24 @@
     <div class="menu-title">Hệ thống</div>
     <a href="dang-nhap.html">Đăng xuất</a>
 </div>
-
 <div id="admin-top">
-    <h1>Xóa / ẩn sản phẩm</h1>
-    <div class="admin-user">
-        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
-    </div>
+    <h1>Xóa / Ẩn sản phẩm</h1>
+    <div class="admin-user">Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a></div>
     <div class="clear"></div>
 </div>
 <!-- ============ HẾT MENU QUẢN TRỊ ============ -->
-
 <div id="admin-content">
-    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="san-pham.html">Sản phẩm</a> / Xóa</p>
-
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Trang xác nhận: hiện thông tin sản phẩm, cảnh báo. Sản phẩm đã từng nhập hàng thì chỉ ẨN, chưa nhập thì XÓA hẳn.</li>
-        <li>Nút Xác nhận / Hủy.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="san-pham.html">Xác nhận → san-pham.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="san-pham.html">Danh mục sản phẩm</a> / Xóa hoặc ẩn NH01</p>
+<div class="alert alert-warning">Sản phẩm NH01 đã có trong phiếu nhập và đơn hàng nên nên <b>ẩn</b> thay vì xóa hẳn.</div>
+<div class="card">
+<h2 class="card-title">Nhẫn kim cương Solitaire vàng trắng 18K (NH01)</h2>
+<form name="frmXoaSP" action="san-pham-da-an.html" method="get">
+<table class="form-table" cellspacing="0" cellpadding="0">
+<tr><td class="form-label">Chọn thao tác</td><td><label class="radio-line"><input type="radio" name="tt" value="an" checked="checked" /> Ẩn sản phẩm (khách không thấy, vẫn giữ dữ liệu)</label><label class="radio-line"><input type="radio" name="tt" value="xoa" /> Xóa hẳn (chỉ dùng khi chưa có phiếu nhập hay đơn hàng)</label></td></tr>
+</table>
+<div class="form-actions"><input type="submit" class="btn btn-gold" value="Xác nhận" /> <a class="btn btn-outline" href="san-pham.html">Hủy</a></div>
+</form>
 </div>
-
 </div>
-
 </body>
 </html>
