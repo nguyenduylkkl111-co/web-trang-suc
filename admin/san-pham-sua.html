@@ -9,14 +9,9 @@
 <link rel="stylesheet" type="text/css" href="../css/admin.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm | Barem: I.4 - Sửa sản phẩm (hiện đúng thông tin cũ) -->
-
 <!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
 <div id="sidebar">
-    <a class="brand" href="index.html">
-        <span class="brand-name">AURELIA</span>
-        <span class="brand-sub">TRANG QUẢN TRỊ</span>
-    </a>
+    <a class="brand" href="index.html"><span class="brand-name">AURELIA</span><span class="brand-sub">TRANG QUẢN TRỊ</span></a>
     <div class="menu-title">Tổng quan</div>
     <a href="index.html">Bảng điều khiển</a>
     <div class="menu-title">Người dùng</div>
@@ -34,33 +29,30 @@
     <div class="menu-title">Hệ thống</div>
     <a href="dang-nhap.html">Đăng xuất</a>
 </div>
-
 <div id="admin-top">
     <h1>Sửa sản phẩm</h1>
-    <div class="admin-user">
-        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
-    </div>
+    <div class="admin-user">Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a></div>
     <div class="clear"></div>
 </div>
 <!-- ============ HẾT MENU QUẢN TRỊ ============ -->
-
 <div id="admin-content">
-    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="san-pham.html">Sản phẩm</a> / Sửa</p>
-
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Form giống trang Thêm nhưng ĐIỀN SẴN đúng thông tin NH01 - Nhẫn kim cương Solitaire vàng trắng 18K (value, selected, ảnh hiện tại).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="san-pham.html">Lưu → san-pham.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="san-pham.html">Danh mục sản phẩm</a> / Sửa NH01</p>
+<div class="card">
+<h2 class="card-title">Sửa sản phẩm NH01</h2>
+<form name="frmSuaSP" action="san-pham.html" method="get">
+<table class="form-table" cellspacing="0" cellpadding="0">
+<tr><td class="form-label">Loại sản phẩm <span class="req">*</span></td><td><select name="loai" class="input w-300"><option selected="selected">Nhẫn</option><option>Dây chuyền</option><option>Bông tai</option><option>Vòng tay</option></select></td></tr>
+<tr><td class="form-label">Mã sản phẩm <span class="req">*</span></td><td>NH01</td></tr>
+<tr><td class="form-label">Tên sản phẩm <span class="req">*</span></td><td><input type="text" name="ten" value="Nhẫn kim cương Solitaire vàng trắng 18K" class="input w-500" /></td></tr>
+<tr><td class="form-label">Hình ảnh</td><td><input type="file" name="hinh" /><br /><img src="../images/products/nh01.svg" alt="Nhẫn kim cương Solitaire vàng trắng 18K" width="120" height="120" /></td></tr>
+<tr><td class="form-label">Chất liệu</td><td><input type="text" name="cl" value="Vàng trắng 18K" class="input w-300" /></td></tr>
+<tr><td class="form-label">Đá chủ</td><td><input type="text" name="da" value="Kim cương thiên nhiên" class="input w-300" /></td></tr>
+<tr><td class="form-label">Trọng lượng</td><td><input type="text" name="tl" value="3.2 g" class="input w-100" /></td></tr>
+<tr><td class="form-label">Mô tả</td><td><textarea name="mota" class="textarea w-500" rows="4" cols="60">Nhẫn Solitaire vàng trắng 18K, đá chủ kim cương thiên nhiên.</textarea></td></tr>
+</table>
+<div class="form-actions"><input type="submit" class="btn btn-gold" value="Lưu thay đổi" /> <a class="btn btn-outline" href="san-pham.html">Hủy</a></div>
+</form>
 </div>
-
 </div>
-
 </body>
 </html>

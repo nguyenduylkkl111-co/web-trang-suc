@@ -9,14 +9,9 @@
 <link rel="stylesheet" type="text/css" href="../css/admin.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm | Barem: I.3 -->
-
 <!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
 <div id="sidebar">
-    <a class="brand" href="index.html">
-        <span class="brand-name">AURELIA</span>
-        <span class="brand-sub">TRANG QUẢN TRỊ</span>
-    </a>
+    <a class="brand" href="index.html"><span class="brand-name">AURELIA</span><span class="brand-sub">TRANG QUẢN TRỊ</span></a>
     <div class="menu-title">Tổng quan</div>
     <a href="index.html">Bảng điều khiển</a>
     <div class="menu-title">Người dùng</div>
@@ -34,33 +29,27 @@
     <div class="menu-title">Hệ thống</div>
     <a href="dang-nhap.html">Đăng xuất</a>
 </div>
-
 <div id="admin-top">
     <h1>Sửa loại sản phẩm</h1>
-    <div class="admin-user">
-        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
-    </div>
+    <div class="admin-user">Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a></div>
     <div class="clear"></div>
 </div>
 <!-- ============ HẾT MENU QUẢN TRỊ ============ -->
-
 <div id="admin-content">
     <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="loai-san-pham.html">Loại sản phẩm</a> / Sửa</p>
-
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Form sửa đã điền sẵn thông tin loại đang sửa (ví dụ NH - Nhẫn).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="loai-san-pham.html">Lưu → loai-san-pham.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<div class="card">
+<h2 class="card-title">Sửa loại sản phẩm</h2>
+<form name="frmSuaLoai" action="loai-san-pham.html" method="get">
+<table class="form-table" cellspacing="0" cellpadding="0">
+<tr><td class="form-label">Mã loại</td><td>NH <span class="muted">(không đổi được)</span></td></tr>
+<tr><td class="form-label">Tên loại <span class="req">*</span></td><td><input type="text" name="ten" value="Nhẫn" class="input w-300" /></td></tr>
+<tr><td class="form-label">Mô tả</td><td><textarea name="mota" class="textarea w-500" rows="3" cols="60">Nhẫn đính hôn, nhẫn cưới, nhẫn thời trang</textarea></td></tr>
+<tr><td class="form-label">% lợi nhuận mặc định <span class="req">*</span></td><td><input type="text" name="ln" value="30" class="input w-100" /> %</td></tr>
+<tr><td class="form-label">Trạng thái</td><td><select name="tt" class="input w-200"><option selected="selected">Đang hiển thị</option><option>Ẩn</option></select></td></tr>
+</table>
+<div class="form-actions"><input type="submit" class="btn btn-gold" value="Lưu thay đổi" /> <a class="btn btn-outline" href="loai-san-pham.html">Hủy</a></div>
+</form>
 </div>
-
 </div>
-
 </body>
 </html>

@@ -2,21 +2,16 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8" />
-<title>Loại sản phẩm - Quản trị | AURELIA Jewelry</title>
+<title>Quản lý loại sản phẩm - Quản trị | AURELIA Jewelry</title>
 <meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
 <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
 <link rel="stylesheet" type="text/css" href="../css/common.css" />
 <link rel="stylesheet" type="text/css" href="../css/admin.css" />
 </head>
 <body>
-<!-- PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm | Barem: I.3 - Thêm, sửa, xóa/ẩn loại -->
-
 <!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
 <div id="sidebar">
-    <a class="brand" href="index.html">
-        <span class="brand-name">AURELIA</span>
-        <span class="brand-sub">TRANG QUẢN TRỊ</span>
-    </a>
+    <a class="brand" href="index.html"><span class="brand-name">AURELIA</span><span class="brand-sub">TRANG QUẢN TRỊ</span></a>
     <div class="menu-title">Tổng quan</div>
     <a href="index.html">Bảng điều khiển</a>
     <div class="menu-title">Người dùng</div>
@@ -34,36 +29,25 @@
     <div class="menu-title">Hệ thống</div>
     <a href="dang-nhap.html">Đăng xuất</a>
 </div>
-
 <div id="admin-top">
-    <h1>Loại sản phẩm</h1>
-    <div class="admin-user">
-        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
-    </div>
+    <h1>Quản lý loại sản phẩm</h1>
+    <div class="admin-user">Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a></div>
     <div class="clear"></div>
 </div>
 <!-- ============ HẾT MENU QUẢN TRỊ ============ -->
-
 <div id="admin-content">
     <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / Loại sản phẩm</p>
-
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Bảng loại: mã loại, tên loại, mô tả, số sản phẩm, trạng thái (Hiện / Ẩn), thao tác Sửa | Ẩn/Xóa.</li>
-        <li>Dữ liệu: NH - Nhẫn; DC - Dây chuyền; BT - Bông tai; VT - Vòng tay.</li>
-        <li>Nút Thêm loại mới. Loại đã có sản phẩm thì chỉ cho ẨN, chưa có sản phẩm thì cho XÓA (ghi chú rõ trên giao diện).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="loai-san-pham-them.html">Thêm loại → loai-san-pham-them.html</a></li>
-        <li><a href="loai-san-pham-sua.html">Sửa loại → loai-san-pham-sua.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<div class="card">
+<h2 class="card-title">Danh sách loại sản phẩm <a class="right btn btn-small btn-gold" href="loai-san-pham-them.html">Thêm loại</a></h2>
+<table class="table" cellspacing="0" cellpadding="0">
+<tr><th>Mã loại</th><th>Tên loại</th><th>Mô tả</th><th class="num">% lợi nhuận</th><th class="num">Số SP</th><th>Trạng thái</th><th>Thao tác</th></tr>
+<tr><td>NH</td><td>Nhẫn</td><td>Nhẫn đính hôn, nhẫn cưới, nhẫn thời trang</td><td class="num">30%</td><td class="num">6</td><td><span class="badge badge-active">Đang hiển thị</span></td><td><a class="btn btn-small btn-outline" href="loai-san-pham-sua.html">Sửa</a> <a class="btn btn-small btn-danger" href="loai-san-pham-da-an.html">Ẩn</a></td></tr>
+<tr><td>DC</td><td>Dây chuyền</td><td>Dây chuyền và mặt dây chuyền</td><td class="num">25%</td><td class="num">6</td><td><span class="badge badge-active">Đang hiển thị</span></td><td><a class="btn btn-small btn-outline" href="loai-san-pham-sua.html">Sửa</a> <a class="btn btn-small btn-danger" href="loai-san-pham-da-an.html">Ẩn</a></td></tr>
+<tr><td>BT</td><td>Bông tai</td><td>Bông tai nụ, bông tai dáng dài, khoen tròn</td><td class="num">35%</td><td class="num">6</td><td><span class="badge badge-active">Đang hiển thị</span></td><td><a class="btn btn-small btn-outline" href="loai-san-pham-sua.html">Sửa</a> <a class="btn btn-small btn-danger" href="loai-san-pham-da-an.html">Ẩn</a></td></tr>
+<tr><td>VT</td><td>Vòng tay</td><td>Lắc tay, vòng tay, vòng kiềng</td><td class="num">28%</td><td class="num">6</td><td><span class="badge badge-active">Đang hiển thị</span></td><td><a class="btn btn-small btn-outline" href="loai-san-pham-sua.html">Sửa</a> <a class="btn btn-small btn-danger" href="loai-san-pham-da-an.html">Ẩn</a></td></tr>
+</table>
+<p class="muted mt-10">Loại đã có sản phẩm chỉ được ẩn, không xóa hẳn.</p>
 </div>
-
 </div>
-
 </body>
 </html>
