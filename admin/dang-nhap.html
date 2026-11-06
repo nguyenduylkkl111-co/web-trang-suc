@@ -9,39 +9,33 @@
 <link rel="stylesheet" type="text/css" href="../css/admin.css" />
 </head>
 <body class="admin-login">
-<!-- PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm | Barem: I.1 - Trang đăng nhập admin riêng -->
-
+ 
 <div class="login-wrap">
     <h1>AURELIA</h1>
     <p class="login-sub">Trang quản trị</p>
     <form name="frmAdminLogin" action="index.html" method="get">
         <div class="form-row">
-            <label>Tên đăng nhập</label>
-            <input type="text" name="username" class="input w-full" />
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" id="username" name="username" class="input w-full"  />
         </div>
         <div class="form-row">
-            <label>Mật khẩu</label>
-            <input type="password" name="password" class="input w-full" />
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" class="input w-full" />
+        </div>
+        <div class="form-row">
+            <label class="radio-line"><input type="checkbox" name="remember" value="1" /> Ghi nhớ đăng nhập</label>
         </div>
         <input type="submit" class="btn btn-block" value="Đăng nhập" />
     </form>
-
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV4 — Admin: Tài khoản, Loại SP, Sản phẩm</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Trang đăng nhập RIÊNG cho quản trị, KHÔNG dùng chung với khách hàng (barem I.1).</li>
-        <li>Tài khoản mẫu: <b>admin</b> / <b>admin123</b>. Có thể thêm trang báo lỗi đăng nhập sai (dang-nhap-loi.html).</li>
-        <li>Hoàn thiện giao diện (logo, ghi nhớ đăng nhập, dòng bản quyền) theo bản thiết kế Figma.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="index.html">Đăng nhập thành công → index.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+ 
+    <p class="login-links">
+        <a href="../index.html">&laquo; Về trang bán hàng</a>
+    </p>
+    <p class="login-demo">Tài khoản mẫu: <b>admin</b> / <b>admin123</b></p>
 </div>
-
-</div>
-
+ 
+<p class="login-foot">&copy; 2026 AURELIA Jewelry &mdash; Đồ án Lập trình web và ứng dụng, Khoa CNTT, Đại học Sài Gòn</p>
+ 
 </body>
 </html>
+ 
