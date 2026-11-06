@@ -47,20 +47,80 @@
 <div id="admin-content">
     <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="nhap-hang.html">Phiếu nhập</a> / Sửa</p>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Phiếu PN005 (chưa hoàn thành) điền sẵn: BT05 x4 giá 8.200.000 ₫, VT04 x6 giá 7.400.000 ₫, VT05 x7 giá 6.100.000 ₫, VT06 x5 giá 10.900.000 ₫, NH01 x2 giá 18.500.000 ₫.</li>
-        <li>Cho sửa giá nhập, số lượng; nút Lưu và nút <b>Hoàn thành</b> (sau khi hoàn thành không sửa được nữa).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="nhap-hang.html">Hoàn thành → nhap-hang.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<div class="alert alert-warning">Phiếu <b>PN005</b> chưa hoàn thành nên vẫn được sửa. Sau khi bấm <b>Hoàn thành</b>, phiếu sẽ khóa và không thể sửa nữa.</div>
+<form name="frmSuaPhieu" action="nhap-hang.html" method="get">
+<div class="card">
+    <h2 class="card-title">Thông tin phiếu</h2>
+    <table class="form-table" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="form-label">Mã phiếu</td>
+            <td><b>PN005</b></td>
+        </tr>
+        <tr>
+            <td class="form-label">Ngày nhập <span class="req">*</span></td>
+            <td><input type="text" name="ngaynhap" class="input w-200" value="29/10/2026" /></td>
+        </tr>
+        <tr>
+            <td class="form-label">Trạng thái</td>
+            <td><span class="badge badge-draft">Chưa hoàn thành</span></td>
+        </tr>
+    </table>
 </div>
-
+<div class="card">
+    <h2 class="card-title">Chi tiết hàng nhập</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>STT</th>
+        <th>Sản phẩm</th>
+        <th class="num">Giá nhập (₫)</th>
+        <th class="num">Số lượng</th>
+        <th class="num">Thành tiền</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><select name="sp1" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05" selected="selected">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia1" class="input w-150 num-input" value="8.200.000" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl1" class="input w-60 num-input" value="4" /></td>
+        <td class="num">32.800.000 ₫</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><select name="sp2" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04" selected="selected">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia2" class="input w-150 num-input" value="7.400.000" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl2" class="input w-60 num-input" value="6" /></td>
+        <td class="num">44.400.000 ₫</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><select name="sp3" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05" selected="selected">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia3" class="input w-150 num-input" value="6.100.000" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl3" class="input w-60 num-input" value="7" /></td>
+        <td class="num">42.700.000 ₫</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><select name="sp4" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06" selected="selected">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia4" class="input w-150 num-input" value="10.900.000" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl4" class="input w-60 num-input" value="5" /></td>
+        <td class="num">54.500.000 ₫</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><select name="sp5" class="input w-400"><option value="">-- Chọn sản phẩm --</option><option value="NH01" selected="selected">NH01 - Nhẫn kim cương Solitaire vàng trắng 18K</option><option value="NH02">NH02 - Nhẫn vàng 18K đính đá Ruby</option><option value="NH03">NH03 - Nhẫn cưới trơn vàng 18K</option><option value="NH04">NH04 - Nhẫn vàng hồng 14K đính Sapphire</option><option value="NH05">NH05 - Nhẫn bạc 925 đính đá CZ</option><option value="NH06">NH06 - Nhẫn Emerald vàng 18K viền kim cương tấm</option><option value="DC01">DC01 - Dây chuyền vàng 18K mặt kim cương giọt nước</option><option value="DC02">DC02 - Dây chuyền ngọc trai Akoya vàng trắng 14K</option><option value="DC03">DC03 - Dây chuyền vàng hồng 14K mặt Sapphire</option><option value="DC04">DC04 - Dây chuyền bạc 925 mặt trăng đính CZ</option><option value="DC05">DC05 - Dây chuyền vàng 24K kiểu Ý</option><option value="DC06">DC06 - Dây chuyền Ruby vàng trắng 18K</option><option value="BT01">BT01 - Bông tai kim cương nụ vàng trắng 18K</option><option value="BT02">BT02 - Bông tai ngọc trai nước ngọt bạc 925</option><option value="BT03">BT03 - Bông tai vàng 18K giọt Ruby</option><option value="BT04">BT04 - Bông tai vàng hồng 14K tròn Topaz</option><option value="BT05">BT05 - Bông tai Emerald vàng 18K dáng dài</option><option value="BT06">BT06 - Bông tai bạc 925 khoen tròn</option><option value="VT01">VT01 - Lắc tay Tennis vàng 18K đính kim cương tấm</option><option value="VT02">VT02 - Vòng kiềng vàng 24K trơn</option><option value="VT03">VT03 - Lắc tay bạc 925 charm trái tim</option><option value="VT04">VT04 - Vòng tay vàng hồng 14K đính Sapphire</option><option value="VT05">VT05 - Lắc tay ngọc trai vàng trắng 14K</option><option value="VT06">VT06 - Vòng tay Ruby vàng 18K</option></select></td>
+        <td class="num"><input type="text" name="gia5" class="input w-150 num-input" value="18.500.000" placeholder="VNĐ" /></td>
+        <td class="num"><input type="text" name="sl5" class="input w-60 num-input" value="2" /></td>
+        <td class="num">37.000.000 ₫</td>
+    </tr>
+</table>
+    <p class="mt-10"><a class="btn btn-small btn-outline" href="nhap-hang-sua.html">+ Thêm dòng</a></p>
+    <p class="tv5-total">Tổng cộng (24 sản phẩm): <b>211.400.000 ₫</b></p>
+</div>
+<div class="form-actions">
+    <input type="submit" name="act" class="btn" value="Lưu" />
+    <input type="submit" name="act" class="btn btn-gold" value="Hoàn thành" />
+    <a class="btn btn-outline" href="nhap-hang.html">Hủy</a>
+</div>
+</form>
 </div>
 
 </body>

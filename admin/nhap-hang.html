@@ -47,24 +47,87 @@
 <div id="admin-content">
     <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / Phiếu nhập hàng</p>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Bảng phiếu nhập: PN001 (05/09/2026, Hoàn thành); PN002 (20/09/2026, Hoàn thành); PN003 (05/10/2026, Hoàn thành); PN004 (18/10/2026, Hoàn thành); PN005 (29/10/2026, Chưa hoàn thành).</li>
-        <li>Cột: mã phiếu, ngày nhập, số mặt hàng, tổng số lượng, tổng tiền, trạng thái (<code>.badge-done</code> / <code>.badge-draft</code>), thao tác.</li>
-        <li>Tìm theo mã phiếu / khoảng ngày nhập.</li>
-        <li>Phiếu đã hoàn thành chỉ có nút Xem; phiếu chưa hoàn thành có nút Sửa.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="nhap-hang-them.html">Thêm phiếu → nhap-hang-them.html</a></li>
-        <li><a href="nhap-hang-sua.html">Sửa PN005 → nhap-hang-sua.html</a></li>
-        <li><a href="nhap-hang-chi-tiet.html">Xem PN001 → nhap-hang-chi-tiet.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<form name="frmTimPhieu" action="nhap-hang-tim.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Mã phiếu</div>
+        <input type="text" name="ma" class="input w-150" value="" placeholder="VD: PN003" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Từ ngày</div>
+        <input type="text" name="tu" class="input w-150" value="" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Đến ngày</div>
+        <input type="text" name="den" class="input w-150" value="" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-action">
+        <input type="submit" class="btn" value="Tìm" />
+        <a class="btn btn-outline" href="nhap-hang.html">Xóa lọc</a>
+    </div>
+    <div class="clear"></div>
 </div>
-
+</form>
+<div class="card">
+    <h2 class="card-title">Danh sách phiếu nhập hàng <span class="right"><a class="btn btn-small btn-gold" href="nhap-hang-them.html">+ Thêm phiếu nhập</a></span></h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã phiếu</th>
+        <th>Ngày nhập</th>
+        <th class="num">Số mặt hàng</th>
+        <th class="num">Tổng số lượng</th>
+        <th class="num">Tổng tiền</th>
+        <th>Trạng thái</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr>
+        <td class="bold">PN001</td>
+        <td>05/09/2026</td>
+        <td class="num">5</td>
+        <td class="num">27</td>
+        <td class="num">257.700.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN002</td>
+        <td>20/09/2026</td>
+        <td class="num">5</td>
+        <td class="num">110</td>
+        <td class="num">58.700.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet-pn002.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN003</td>
+        <td>05/10/2026</td>
+        <td class="num">5</td>
+        <td class="num">26</td>
+        <td class="num">244.000.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet-pn003.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN004</td>
+        <td>18/10/2026</td>
+        <td class="num">5</td>
+        <td class="num">29</td>
+        <td class="num">219.300.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet-pn004.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN005</td>
+        <td>29/10/2026</td>
+        <td class="num">5</td>
+        <td class="num">24</td>
+        <td class="num">211.400.000 ₫</td>
+        <td><span class="badge badge-draft">Chưa hoàn thành</span></td>
+        <td><a class="btn btn-small btn-gold" href="nhap-hang-sua.html">Sửa</a></td>
+    </tr>
+</table>
+    <p class="tv5-note">Phiếu <b>đã hoàn thành</b> chỉ xem được; chỉ phiếu <b>chưa hoàn thành</b> mới có nút Sửa.</p>
+</div>
 </div>
 
 </body>

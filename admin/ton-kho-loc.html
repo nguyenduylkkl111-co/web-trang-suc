@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Kết quả tra cứu tồn kho - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | Barem: I.8 - Tra cứu tồn theo loại tại thời điểm -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html" class="active">Tồn kho</a>
+    <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Kết quả tra cứu tồn kho</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="ton-kho.html">Tồn kho</a> / Kết quả tra cứu</p>
+
+<div class="alert alert-info">Kết quả tra cứu: loại <b>Bông tai</b>, tại thời điểm <b>30/10/2026</b> — <b>6</b> sản phẩm.</div>
+<div class="alert alert-warning"><b>Cảnh báo sắp hết hàng:</b> <b>BT05</b> (còn 3).</div>
+<form name="frmTonKho" action="ton-kho-loc.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Loại sản phẩm</div>
+        <select name="loai" class="input w-200"><option value="">Tất cả loại</option><option value="NH">Nhẫn</option><option value="DC">Dây chuyền</option><option value="BT" selected="selected">Bông tai</option><option value="VT">Vòng tay</option></select>
+    </div>
+    <div class="filter-item">
+        <div class="label">Tại thời điểm (ngày)</div>
+        <input type="text" name="ngay" class="input w-150" value="30/10/2026" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-action">
+        <input type="submit" class="btn" value="Tra cứu" />
+        <a class="btn btn-outline" href="ton-kho.html">Xem tất cả</a>
+    </div>
+    <div class="clear"></div>
+</div>
+</form>
+<div class="card">
+    <h2 class="card-title">Tồn kho — Bông tai (30/10/2026)</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã</th>
+        <th>Tên sản phẩm</th>
+        <th>Loại</th>
+        <th class="num">Số lượng tồn</th>
+        <th>Cảnh báo</th>
+    </tr>
+    <tr>
+        <td class="bold">BT01</td>
+        <td>Bông tai kim cương nụ vàng trắng 18K</td>
+        <td>Bông tai</td>
+        <td class="num">6</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT02</td>
+        <td>Bông tai ngọc trai nước ngọt bạc 925</td>
+        <td>Bông tai</td>
+        <td class="num">22</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT03</td>
+        <td>Bông tai vàng 18K giọt Ruby</td>
+        <td>Bông tai</td>
+        <td class="num">8</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT04</td>
+        <td>Bông tai vàng hồng 14K tròn Topaz</td>
+        <td>Bông tai</td>
+        <td class="num">10</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold">BT05</td>
+        <td>Bông tai Emerald vàng 18K dáng dài</td>
+        <td>Bông tai</td>
+        <td class="num">3</td>
+        <td><span class="badge badge-low">Sắp hết</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT06</td>
+        <td>Bông tai bạc 925 khoen tròn</td>
+        <td>Bông tai</td>
+        <td class="num">35</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+</table>
+</div>
+<p><a class="btn btn-outline" href="ton-kho.html">Quay lại tồn kho</a> <a class="btn btn-outline" href="nhap-xuat-ton.html">Nhập – xuất – tồn</a></p>
+</div>
+
+</body>
+</html>
