@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đăng nhập quản trị</title>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="login-page">
+<form class="login-box" id="loginForm" novalidate>
+  <div class="logo">💎</div>
+  <h1>Quản trị cửa hàng</h1>
+  <div class="sub">Đăng nhập dành cho quản trị viên</div>
+  <div class="alert" id="alertBox"></div>
+  <div class="field">
+    <label for="username">Tên đăng nhập <span class="req">*</span></label>
+    <input type="text" id="username" autocomplete="username" autofocus>
+    <div class="error" id="err-user"></div>
+  </div>
+  <div class="field">
+    <label for="password">Mật khẩu <span class="req">*</span></label>
+    <input type="password" id="password" autocomplete="current-password">
+    <div class="error" id="err-pass"></div>
+  </div>
+  <button class="btn" type="submit">Đăng nhập</button>
+  <div class="demo">Tài khoản demo: <b>admin</b> / <b>admin123</b></div>
+</form>
+<script src="js/admin.js"></script>
+<script>
+(function () {
+  A.seed();
+  if (sessionStorage.getItem(A.K.session) === '1') { location.replace('index.html'); return; }
+  A.$('loginForm').onsubmit = function (e) {
+    e.preventDefault();
+    var u = A.$('username').value.trim(), p = A.$('password').value, ok = true;
+    A.$('err-user').textContent = u ? '' : 'Vui lòng nhập tên đăng nhập.';
+    A.$('err-pass').textContent = p ? '' : 'Vui lòng nhập mật khẩu.';
+    if (!u || !p) return;
+    if (A.login(u, p)) { location.href = 'index.html'; }
+    else { var b = A.$('alertBox'); b.textContent = 'Sai tên đăng nhập hoặc mật khẩu.'; b.style.display = 'block'; }
+  };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loại sản phẩm — Admin</title>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside id="sidebar"></aside>
+  <div class="admin-main">
+    <header id="topbar"></header>
+    <main class="admin-content">
+      <div class="breadcrumb">Trang chủ quản trị › Loại sản phẩm</div>
+      <div class="card">
+        <div class="toolbar">
+          <input type="search" id="q" placeholder="Tìm theo mã, tên loại...">
+          <span class="spacer"></span>
+          <a class="btn" href="loai-san-pham-them.html">+ Thêm loại sản phẩm</a>
+        </div>
+        <div class="table-wrap">
+          <table class="tbl">
+            <thead><tr><th>#</th><th>Mã loại</th><th>Tên loại</th><th>Mô tả</th><th>Số SP</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="js/admin.js"></script>
+<script>
+if (A.layout('loai-san-pham', 'Quản lý loại sản phẩm')) {
+  var flash = sessionStorage.getItem('jw_flash');
+  if (flash) { sessionStorage.removeItem('jw_flash'); A.toast(flash); }
+
+  function render() {
+    var q = A.$('q').value.trim().toLowerCase(), prods = A.get(A.K.prods);
+    var list = A.get(A.K.cats).filter(function (c) { return !q || (c.ma + ' ' + c.ten).toLowerCase().indexOf(q) >= 0; });
+    A.$('rows').innerHTML = list.length ? list.map(function (c, i) {
+      var n = prods.filter(function (p) { return p.loaiId === c.id; }).length;
+      return '<tr><td>' + (i + 1) + '</td><td>' + A.esc(c.ma) + '</td><td><b>' + A.esc(c.ten) + '</b></td><td class="muted">' + A.esc(c.moTa) + '</td><td>' + n + '</td>' +
+        '<td><span class="badge ' + (c.an ? 'hide' : 'ok') + '">' + (c.an ? 'Đang ẩn' : 'Hiển thị') + '</span></td>' +
+        '<td><div class="actions"><a class="btn small ghost" href="loai-san-pham-sua.html?id=' + c.id + '">Sửa</a>' +
+        '<button class="btn small ghost" data-act="toggle" data-id="' + c.id + '">' + (c.an ? 'Hiện' : 'Ẩn') + '</button>' +
+        '<button class="btn small danger" data-act="del" data-id="' + c.id + '" data-n="' + n + '">Xóa</button></div></td></tr>';
+    }).join('') : '<tr><td class="empty" colspan="7">Chưa có loại sản phẩm.</td></tr>';
+  }
+  A.$('q').oninput = render;
+  A.$('rows').onclick = function (e) {
+    var b = e.target.closest('button[data-act]'); if (!b) return;
+    var id = b.dataset.id, c = A.findBy(A.K.cats, id);
+    if (b.dataset.act === 'toggle') {
+      var list = A.get(A.K.cats); list.forEach(function (x) { if (x.id === id) x.an = !x.an; }); A.set(A.K.cats, list);
+      A.toast(c.an ? 'Đã hiển thị loại "' + c.ten + '"' : 'Đã ẩn loại "' + c.ten + '"'); render(); return;
+    }
+    var n = parseInt(b.dataset.n, 10);
+    if (n > 0) {
+      A.confirmBox('Không thể xóa', 'Loại "' + c.ten + '" đang có ' + n + ' sản phẩm nên chỉ có thể ẩn. Ẩn loại này?', function () {
+        var list = A.get(A.K.cats); list.forEach(function (x) { if (x.id === id) x.an = true; }); A.set(A.K.cats, list);
+        A.toast('Đã ẩn loại "' + c.ten + '"'); render();
+      }, 'Ẩn loại');
+    } else {
+      A.confirmBox('Xóa loại sản phẩm?', 'Loại "' + c.ten + '" chưa có sản phẩm và sẽ bị xóa vĩnh viễn.', function () {
+        A.set(A.K.cats, A.get(A.K.cats).filter(function (x) { return x.id !== id; }));
+        A.toast('Đã xóa loại "' + c.ten + '"'); render();
+      }, 'Xóa');
+    }
+  };
+  render();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reset mật khẩu khách hàng — Admin</title>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside id="sidebar"></aside>
+  <div class="admin-main">
+    <header id="topbar"></header>
+    <main class="admin-content">
+      <div class="breadcrumb"><a href="index.html">Trang chủ quản trị</a> › <a href="khach-hang.html">Khách hàng</a> › Reset mật khẩu</div>
+      <div class="card" id="box"></div>
+    </main>
+  </div>
+</div>
+<script src="js/admin.js"></script>
+<script>
+if (A.layout('khach-hang', 'Reset mật khẩu')) {
+  var u = A.findBy(A.K.users, A.param('id')), box = A.$('box');
+  function newPw() {
+    var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789', s = '';
+    for (var i = 0; i < 8; i++) s += chars[Math.floor(Math.random() * chars.length)];
+    return s;
+  }
+  if (!u) {
+    box.innerHTML = '<div class="result-box fail"><div class="big">⚠️</div><h2>Không tìm thấy khách hàng</h2><a class="btn" href="khach-hang.html">Về danh sách</a></div>';
+  } else {
+    box.innerHTML = '<h2>Đặt lại mật khẩu cho khách hàng</h2><dl class="info-list"><dt>Họ tên</dt><dd>' + A.esc(u.hoTen) + '</dd><dt>Email</dt><dd>' + A.esc(u.email) + '</dd><dt>SĐT</dt><dd>' + A.esc(u.sdt) + '</dd></dl>' +
+      '<p class="muted">Hệ thống sẽ tạo mật khẩu ngẫu nhiên mới. Hãy gửi mật khẩu này cho khách hàng.</p>' +
+      '<div class="form-actions"><button class="btn" id="doReset">Đặt lại mật khẩu</button><a class="btn ghost" href="khach-hang.html">Quay lại</a></div>';
+    A.$('doReset').onclick = function () {
+      var pw = newPw(), list = A.get(A.K.users);
+      list.forEach(function (x) { if (x.id === u.id) x.matKhau = pw; });
+      A.set(A.K.users, list);
+      box.innerHTML = '<div class="result-box ok"><div class="big">✔</div><h2>Đặt lại mật khẩu thành công</h2><p>Mật khẩu mới của <b>' + A.esc(u.hoTen) + '</b>:</p><div class="pw-show">' + pw + '</div><p>Vui lòng thông báo cho khách hàng và nhắc đổi mật khẩu sau khi đăng nhập.</p><a class="btn" href="khach-hang.html">Về danh sách khách hàng</a></div>';
+    };
+  }
+}
+</script>
+</body>
+</html>
