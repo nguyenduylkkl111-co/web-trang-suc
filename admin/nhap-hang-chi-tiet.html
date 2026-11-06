@@ -47,20 +47,77 @@
 <div id="admin-content">
     <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="nhap-hang.html">Phiếu nhập</a> / PN001</p>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Phiếu PN001 đã hoàn thành: chỉ XEM, không có ô nhập, không có nút Sửa.</li>
-        <li>Chi tiết: NH01 x3, NH02 x5, NH03 x10, DC01 x4, BT01 x5.</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="nhap-hang.html">Quay lại</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<div class="alert alert-success">Phiếu PN001 đã <b>hoàn thành</b> — chỉ xem, không thể chỉnh sửa.</div>
+<div class="card">
+    <h2 class="card-title">Thông tin phiếu</h2>
+    <table class="tv5-info" cellspacing="0" cellpadding="0">
+        <tr><td class="info-name">Mã phiếu</td><td><b>PN001</b></td></tr>
+        <tr><td class="info-name">Ngày nhập</td><td>05/09/2026</td></tr>
+        <tr><td class="info-name">Trạng thái</td><td><span class="badge badge-done">Hoàn thành</span></td></tr>
+        <tr><td class="info-name">Tổng số lượng</td><td>27</td></tr>
+        <tr><td class="info-name">Tổng tiền</td><td><b>257.700.000 ₫</b></td></tr>
+    </table>
+    <h2 class="card-title">Chi tiết hàng nhập</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>STT</th>
+        <th>Mã SP</th>
+        <th>Tên sản phẩm</th>
+        <th class="num">Giá nhập</th>
+        <th class="num">Số lượng</th>
+        <th class="num">Thành tiền</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td class="bold">NH01</td>
+        <td>Nhẫn kim cương Solitaire vàng trắng 18K</td>
+        <td class="num">18.500.000 ₫</td>
+        <td class="num">3</td>
+        <td class="num">55.500.000 ₫</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td class="bold">NH02</td>
+        <td>Nhẫn vàng 18K đính đá Ruby</td>
+        <td class="num">7.200.000 ₫</td>
+        <td class="num">5</td>
+        <td class="num">36.000.000 ₫</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td class="bold">NH03</td>
+        <td>Nhẫn cưới trơn vàng 18K</td>
+        <td class="num">5.400.000 ₫</td>
+        <td class="num">10</td>
+        <td class="num">54.000.000 ₫</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td class="bold">DC01</td>
+        <td>Dây chuyền vàng 18K mặt kim cương giọt nước</td>
+        <td class="num">15.800.000 ₫</td>
+        <td class="num">4</td>
+        <td class="num">63.200.000 ₫</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td class="bold">BT01</td>
+        <td>Bông tai kim cương nụ vàng trắng 18K</td>
+        <td class="num">9.800.000 ₫</td>
+        <td class="num">5</td>
+        <td class="num">49.000.000 ₫</td>
+    </tr>
+    <tr class="total">
+        <td>Tổng cộng</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="num">27</td>
+        <td class="num">257.700.000 ₫</td>
+    </tr>
+</table>
 </div>
-
+<p><a class="btn btn-outline" href="nhap-hang.html">Quay lại</a></p>
 </div>
 
 </body>

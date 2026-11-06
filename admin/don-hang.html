@@ -47,21 +47,113 @@
 <div id="admin-content">
     <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / Đơn đặt hàng</p>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Bảng 8 đơn hàng (DH0001 – DH0008): mã, khách hàng, ngày đặt, tổng tiền, thanh toán, tình trạng, nút Xem.</li>
-        <li>Bộ lọc: <b>từ ngày – đến ngày</b> (2 ô ngày) và <b>tình trạng</b> (select: Tất cả, Mới đặt, Đã xử lý, Đã giao, Hủy); nút Lọc.</li>
-        <li>Gợi ý trang kết quả lọc mẫu: don-hang-loc.html (ví dụ 20/10 – 30/10, Mới đặt → DH0005, DH0007, DH0008).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="don-hang-chi-tiet.html">Xem chi tiết → don-hang-chi-tiet.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<form name="frmLocDon" action="don-hang-loc.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Từ ngày</div>
+        <input type="text" name="tu" class="input w-150" value="" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Đến ngày</div>
+        <input type="text" name="den" class="input w-150" value="" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Tình trạng</div>
+        <select name="tinhtrang" class="input w-200"><option value="">Tất cả</option><option value="Mới đặt">Mới đặt</option><option value="Đã xử lý">Đã xử lý</option><option value="Đã giao">Đã giao</option><option value="Hủy">Hủy</option></select>
+    </div>
+    <div class="filter-action">
+        <input type="submit" class="btn" value="Lọc" />
+        <a class="btn btn-outline" href="don-hang.html">Xóa lọc</a>
+    </div>
+    <div class="clear"></div>
 </div>
-
+</form>
+<div class="card">
+    <h2 class="card-title">Danh sách đơn đặt hàng (8 đơn)</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã đơn</th>
+        <th>Khách hàng</th>
+        <th>Ngày đặt</th>
+        <th class="num">Tổng tiền</th>
+        <th>Thanh toán</th>
+        <th>Tình trạng</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr>
+        <td class="bold">DH0001</td>
+        <td>KH01 - Nguyễn Thị Lan</td>
+        <td>02/10/2026</td>
+        <td class="num">7.940.000 ₫</td>
+        <td>Tiền mặt khi nhận hàng</td>
+        <td><span class="badge badge-done">Đã giao</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0001.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0002</td>
+        <td>KH02 - Trần Minh Khoa</td>
+        <td>08/10/2026</td>
+        <td class="num">7.880.000 ₫</td>
+        <td>Chuyển khoản</td>
+        <td><span class="badge badge-done">Đã giao</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0002.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0003</td>
+        <td>KH03 - Lê Hoàng Yến</td>
+        <td>15/10/2026</td>
+        <td class="num">14.590.000 ₫</td>
+        <td>Thanh toán trực tuyến</td>
+        <td><span class="badge badge-processing">Đã xử lý</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0003.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0004</td>
+        <td>KH01 - Nguyễn Thị Lan</td>
+        <td>21/10/2026</td>
+        <td class="num">1.850.000 ₫</td>
+        <td>Tiền mặt khi nhận hàng</td>
+        <td><span class="badge badge-processing">Đã xử lý</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0004.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0005</td>
+        <td>KH05 - Võ Thanh Trúc</td>
+        <td>25/10/2026</td>
+        <td class="num">9.470.000 ₫</td>
+        <td>Chuyển khoản</td>
+        <td><span class="badge badge-new">Mới đặt</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet.html">Xem</a></td>
+    </tr>
+    <tr class="row-muted">
+        <td class="bold">DH0006</td>
+        <td>KH06 - Đặng Gia Huy</td>
+        <td>27/10/2026</td>
+        <td class="num">16.380.000 ₫</td>
+        <td>Tiền mặt khi nhận hàng</td>
+        <td><span class="badge badge-cancel">Hủy</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0006.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0007</td>
+        <td>KH02 - Trần Minh Khoa</td>
+        <td>28/10/2026</td>
+        <td class="num">1.880.000 ₫</td>
+        <td>Tiền mặt khi nhận hàng</td>
+        <td><span class="badge badge-new">Mới đặt</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0007.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0008</td>
+        <td>KH01 - Nguyễn Thị Lan</td>
+        <td>30/10/2026</td>
+        <td class="num">25.890.000 ₫</td>
+        <td>Tiền mặt khi nhận hàng</td>
+        <td><span class="badge badge-new">Mới đặt</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0008.html">Xem</a></td>
+    </tr>
+</table>
+</div>
 </div>
 
 </body>

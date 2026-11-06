@@ -47,21 +47,334 @@
 <div id="admin-content">
     <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / Giá bán &amp; lợi nhuận</p>
 
-<div class="todo-box">
-    <span class="todo-owner">PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho</span>
-    <h3>Cần làm ở trang này</h3>
-    <ul>
-        <li>Bảng 1 - % lợi nhuận theo LOẠI: Nhẫn 30%; Dây chuyền 25%; Bông tai 35%; Vòng tay 28% (nút Sửa).</li>
-        <li>Bảng 2 - % lợi nhuận theo SẢN PHẨM trong từng loại: lọc theo loại; sản phẩm có % riêng thì ghi rõ (ví dụ NH05 50%, DC05 12%), còn lại theo % của loại.</li>
-        <li>Tra cứu: tìm theo mã/tên → hiện giá vốn, % lợi nhuận, giá bán (giá bán = giá vốn × (1 + %)).</li>
-    </ul>
-    <h3>Liên kết tạm để bấm thử luồng (giữ lại khi làm thật)</h3>
-    <ul class="todo-flow">
-        <li><a href="gia-ban-sua.html">Sửa % → gia-ban-sua.html</a></li>
-    </ul>
-    <p class="todo-note">Dữ liệu lấy đúng theo <b>docs/DU-LIEU-MAU.md</b>; mẫu nút, bảng, form xem <b>mau-giao-dien/thanh-phan.html</b>. Làm xong thì XÓA khung này.</p>
+<div class="card">
+    <h2 class="card-title">Bảng 1 — % lợi nhuận theo loại sản phẩm</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã loại</th>
+        <th>Loại sản phẩm</th>
+        <th class="num">% lợi nhuận</th>
+        <th class="num">Số sản phẩm</th>
+        <th class="num">SP có % riêng</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr>
+        <td class="bold">NH</td>
+        <td>Nhẫn</td>
+        <td class="num">30%</td>
+        <td class="num">6</td>
+        <td class="num">1</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DC</td>
+        <td>Dây chuyền</td>
+        <td class="num">25%</td>
+        <td class="num">6</td>
+        <td class="num">2</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">BT</td>
+        <td>Bông tai</td>
+        <td class="num">35%</td>
+        <td class="num">6</td>
+        <td class="num">1</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">VT</td>
+        <td>Vòng tay</td>
+        <td class="num">28%</td>
+        <td class="num">6</td>
+        <td class="num">2</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+</table>
+    <p class="tv5-note">Giá bán = giá vốn × (1 + % lợi nhuận), làm tròn đến hàng chục nghìn.</p>
 </div>
-
+<div class="card">
+    <h2 class="card-title">Tra cứu giá vốn, % lợi nhuận, giá bán</h2>
+<form name="frmTraCuu" action="gia-ban-tra-cuu.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Tra cứu theo mã hoặc tên sản phẩm</div>
+        <input type="text" name="q" class="input w-300" value="" placeholder="VD: NH05 hoặc Nhẫn bạc" />
+    </div>
+    <div class="filter-action"><input type="submit" class="btn" value="Tra cứu" /></div>
+    <div class="clear"></div>
+</div>
+</form>
+</div>
+<div class="card">
+    <h2 class="card-title">Bảng 2 — % lợi nhuận theo từng sản phẩm</h2>
+<form name="frmLocLoai" action="gia-ban-loc.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Loại sản phẩm</div>
+        <select name="loai" class="input w-200"><option value="">Tất cả loại</option><option value="NH">Nhẫn</option><option value="DC">Dây chuyền</option><option value="BT">Bông tai</option><option value="VT">Vòng tay</option></select>
+    </div>
+    <div class="filter-action">
+        <input type="submit" class="btn" value="Lọc" />
+        <a class="btn btn-outline" href="gia-ban.html">Xem tất cả</a>
+    </div>
+    <div class="clear"></div>
+</div>
+</form>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã</th>
+        <th>Tên sản phẩm</th>
+        <th>Loại</th>
+        <th class="num">Giá vốn</th>
+        <th class="num">% của loại</th>
+        <th class="num">% áp dụng</th>
+        <th class="num">Giá bán</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr>
+        <td class="bold">NH01</td>
+        <td>Nhẫn kim cương Solitaire vàng trắng 18K</td>
+        <td>Nhẫn</td>
+        <td class="num">18.500.000 ₫</td>
+        <td class="num">30%</td>
+        <td class="num">30%</td>
+        <td class="num">24.050.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">NH02</td>
+        <td>Nhẫn vàng 18K đính đá Ruby</td>
+        <td>Nhẫn</td>
+        <td class="num">7.200.000 ₫</td>
+        <td class="num">30%</td>
+        <td class="num">30%</td>
+        <td class="num">9.360.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">NH03</td>
+        <td>Nhẫn cưới trơn vàng 18K</td>
+        <td>Nhẫn</td>
+        <td class="num">5.400.000 ₫</td>
+        <td class="num">30%</td>
+        <td class="num">30%</td>
+        <td class="num">7.020.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">NH04</td>
+        <td>Nhẫn vàng hồng 14K đính Sapphire</td>
+        <td>Nhẫn</td>
+        <td class="num">6.800.000 ₫</td>
+        <td class="num">30%</td>
+        <td class="num">30%</td>
+        <td class="num">8.840.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">NH05</td>
+        <td>Nhẫn bạc 925 đính đá CZ</td>
+        <td>Nhẫn</td>
+        <td class="num">450.000 ₫</td>
+        <td class="num">30%</td>
+        <td class="num"><span class="gold bold">50%</span> <span class="badge badge-processing">riêng</span></td>
+        <td class="num">680.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">NH06</td>
+        <td>Nhẫn Emerald vàng 18K viền kim cương tấm</td>
+        <td>Nhẫn</td>
+        <td class="num">12.600.000 ₫</td>
+        <td class="num">30%</td>
+        <td class="num">30%</td>
+        <td class="num">16.380.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DC01</td>
+        <td>Dây chuyền vàng 18K mặt kim cương giọt nước</td>
+        <td>Dây chuyền</td>
+        <td class="num">15.800.000 ₫</td>
+        <td class="num">25%</td>
+        <td class="num">25%</td>
+        <td class="num">19.750.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DC02</td>
+        <td>Dây chuyền ngọc trai Akoya vàng trắng 14K</td>
+        <td>Dây chuyền</td>
+        <td class="num">8.900.000 ₫</td>
+        <td class="num">25%</td>
+        <td class="num">25%</td>
+        <td class="num">11.120.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DC03</td>
+        <td>Dây chuyền vàng hồng 14K mặt Sapphire</td>
+        <td>Dây chuyền</td>
+        <td class="num">6.300.000 ₫</td>
+        <td class="num">25%</td>
+        <td class="num">25%</td>
+        <td class="num">7.880.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DC04</td>
+        <td>Dây chuyền bạc 925 mặt trăng đính CZ</td>
+        <td>Dây chuyền</td>
+        <td class="num">520.000 ₫</td>
+        <td class="num">25%</td>
+        <td class="num"><span class="gold bold">45%</span> <span class="badge badge-processing">riêng</span></td>
+        <td class="num">750.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DC05</td>
+        <td>Dây chuyền vàng 24K kiểu Ý</td>
+        <td>Dây chuyền</td>
+        <td class="num">11.200.000 ₫</td>
+        <td class="num">25%</td>
+        <td class="num"><span class="gold bold">12%</span> <span class="badge badge-processing">riêng</span></td>
+        <td class="num">12.540.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DC06</td>
+        <td>Dây chuyền Ruby vàng trắng 18K</td>
+        <td>Dây chuyền</td>
+        <td class="num">9.700.000 ₫</td>
+        <td class="num">25%</td>
+        <td class="num">25%</td>
+        <td class="num">12.120.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">BT01</td>
+        <td>Bông tai kim cương nụ vàng trắng 18K</td>
+        <td>Bông tai</td>
+        <td class="num">9.800.000 ₫</td>
+        <td class="num">35%</td>
+        <td class="num">35%</td>
+        <td class="num">13.230.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">BT02</td>
+        <td>Bông tai ngọc trai nước ngọt bạc 925</td>
+        <td>Bông tai</td>
+        <td class="num">680.000 ₫</td>
+        <td class="num">35%</td>
+        <td class="num">35%</td>
+        <td class="num">920.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">BT03</td>
+        <td>Bông tai vàng 18K giọt Ruby</td>
+        <td>Bông tai</td>
+        <td class="num">5.900.000 ₫</td>
+        <td class="num">35%</td>
+        <td class="num">35%</td>
+        <td class="num">7.960.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">BT04</td>
+        <td>Bông tai vàng hồng 14K tròn Topaz</td>
+        <td>Bông tai</td>
+        <td class="num">3.400.000 ₫</td>
+        <td class="num">35%</td>
+        <td class="num">35%</td>
+        <td class="num">4.590.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">BT05</td>
+        <td>Bông tai Emerald vàng 18K dáng dài</td>
+        <td>Bông tai</td>
+        <td class="num">8.200.000 ₫</td>
+        <td class="num">35%</td>
+        <td class="num">35%</td>
+        <td class="num">11.070.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">BT06</td>
+        <td>Bông tai bạc 925 khoen tròn</td>
+        <td>Bông tai</td>
+        <td class="num">390.000 ₫</td>
+        <td class="num">35%</td>
+        <td class="num"><span class="gold bold">55%</span> <span class="badge badge-processing">riêng</span></td>
+        <td class="num">600.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">VT01</td>
+        <td>Lắc tay Tennis vàng 18K đính kim cương tấm</td>
+        <td>Vòng tay</td>
+        <td class="num">24.500.000 ₫</td>
+        <td class="num">28%</td>
+        <td class="num">28%</td>
+        <td class="num">31.360.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">VT02</td>
+        <td>Vòng kiềng vàng 24K trơn</td>
+        <td>Vòng tay</td>
+        <td class="num">16.800.000 ₫</td>
+        <td class="num">28%</td>
+        <td class="num"><span class="gold bold">10%</span> <span class="badge badge-processing">riêng</span></td>
+        <td class="num">18.480.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">VT03</td>
+        <td>Lắc tay bạc 925 charm trái tim</td>
+        <td>Vòng tay</td>
+        <td class="num">760.000 ₫</td>
+        <td class="num">28%</td>
+        <td class="num"><span class="gold bold">45%</span> <span class="badge badge-processing">riêng</span></td>
+        <td class="num">1.100.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">VT04</td>
+        <td>Vòng tay vàng hồng 14K đính Sapphire</td>
+        <td>Vòng tay</td>
+        <td class="num">7.400.000 ₫</td>
+        <td class="num">28%</td>
+        <td class="num">28%</td>
+        <td class="num">9.470.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">VT05</td>
+        <td>Lắc tay ngọc trai vàng trắng 14K</td>
+        <td>Vòng tay</td>
+        <td class="num">6.100.000 ₫</td>
+        <td class="num">28%</td>
+        <td class="num">28%</td>
+        <td class="num">7.810.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+    <tr>
+        <td class="bold">VT06</td>
+        <td>Vòng tay Ruby vàng 18K</td>
+        <td>Vòng tay</td>
+        <td class="num">10.900.000 ₫</td>
+        <td class="num">28%</td>
+        <td class="num">28%</td>
+        <td class="num">13.950.000 ₫</td>
+        <td><a class="btn btn-small btn-outline" href="gia-ban-sua.html">Sửa</a></td>
+    </tr>
+</table>
+    <p class="tv5-note">Sản phẩm có nhãn <span class="badge badge-processing">riêng</span> dùng % riêng (NH05 50%, DC04 45%, DC05 12%, BT06 55%, VT02 10%, VT03 45%); các sản phẩm còn lại theo % của loại.</p>
+</div>
 </div>
 
 </body>
