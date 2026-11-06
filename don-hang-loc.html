@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Kết quả lọc đơn hàng - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | Barem: I.7 - Lọc đơn hàng theo khoảng ngày và tình trạng -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html">Tồn kho</a>
+    <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html" class="active">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Kết quả lọc đơn hàng</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / <a href="don-hang.html">Đơn hàng</a> / Kết quả lọc</p>
+
+<form name="frmLocDon" action="don-hang-loc.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Từ ngày</div>
+        <input type="text" name="tu" class="input w-150" value="20/10/2026" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Đến ngày</div>
+        <input type="text" name="den" class="input w-150" value="30/10/2026" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Tình trạng</div>
+        <select name="tinhtrang" class="input w-200"><option value="">Tất cả</option><option value="Mới đặt" selected="selected">Mới đặt</option><option value="Đã xử lý">Đã xử lý</option><option value="Đã giao">Đã giao</option><option value="Hủy">Hủy</option></select>
+    </div>
+    <div class="filter-action">
+        <input type="submit" class="btn" value="Lọc" />
+        <a class="btn btn-outline" href="don-hang.html">Xóa lọc</a>
+    </div>
+    <div class="clear"></div>
+</div>
+</form>
+<div class="alert alert-info">Kết quả lọc: đơn đặt từ <b>20/10/2026</b> đến <b>30/10/2026</b>, tình trạng <b>Mới đặt</b> — tìm thấy <b>3</b> đơn (DH0005, DH0007, DH0008).</div>
+<div class="card">
+    <h2 class="card-title">Kết quả lọc đơn hàng</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã đơn</th>
+        <th>Khách hàng</th>
+        <th>Ngày đặt</th>
+        <th class="num">Tổng tiền</th>
+        <th>Thanh toán</th>
+        <th>Tình trạng</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr>
+        <td class="bold">DH0005</td>
+        <td>KH05 - Võ Thanh Trúc</td>
+        <td>25/10/2026</td>
+        <td class="num">9.470.000 ₫</td>
+        <td>Chuyển khoản</td>
+        <td><span class="badge badge-new">Mới đặt</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0007</td>
+        <td>KH02 - Trần Minh Khoa</td>
+        <td>28/10/2026</td>
+        <td class="num">1.880.000 ₫</td>
+        <td>Tiền mặt khi nhận hàng</td>
+        <td><span class="badge badge-new">Mới đặt</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0007.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">DH0008</td>
+        <td>KH01 - Nguyễn Thị Lan</td>
+        <td>30/10/2026</td>
+        <td class="num">25.890.000 ₫</td>
+        <td>Tiền mặt khi nhận hàng</td>
+        <td><span class="badge badge-new">Mới đặt</span></td>
+        <td><a class="btn btn-small btn-outline" href="don-hang-chi-tiet-dh0008.html">Xem</a></td>
+    </tr>
+</table>
+</div>
+<p><a class="btn btn-outline" href="don-hang.html">Quay lại danh sách đơn hàng</a></p>
+</div>
+
+</body>
+</html>
