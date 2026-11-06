@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Tồn kho - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | Barem: I.8 - Tra cứu tồn theo loại tại thời điểm, cảnh báo sắp hết -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html" class="active">Tồn kho</a>
+    <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Tồn kho</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / Tồn kho</p>
+
+<div class="alert alert-warning"><b>Cảnh báo sắp hết hàng:</b> có <b>4</b> sản phẩm tồn ≤ 3 — <b>NH01</b> (còn 2); <b>DC05</b> (còn 1); <b>BT05</b> (còn 3); <b>VT01</b> (còn 2).</div>
+<form name="frmTonKho" action="ton-kho-loc.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Loại sản phẩm</div>
+        <select name="loai" class="input w-200"><option value="">Tất cả loại</option><option value="NH">Nhẫn</option><option value="DC">Dây chuyền</option><option value="BT">Bông tai</option><option value="VT">Vòng tay</option></select>
+    </div>
+    <div class="filter-item">
+        <div class="label">Tại thời điểm (ngày)</div>
+        <input type="text" name="ngay" class="input w-150" value="30/10/2026" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-action">
+        <input type="submit" class="btn" value="Tra cứu" />
+        <a class="btn btn-outline" href="ton-kho.html">Xem tất cả</a>
+    </div>
+    <div class="clear"></div>
+</div>
+</form>
+<div class="card">
+    <h2 class="card-title">Tồn kho tất cả sản phẩm tại ngày 30/10/2026</h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã</th>
+        <th>Tên sản phẩm</th>
+        <th>Loại</th>
+        <th class="num">Số lượng tồn</th>
+        <th>Cảnh báo</th>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold">NH01</td>
+        <td>Nhẫn kim cương Solitaire vàng trắng 18K</td>
+        <td>Nhẫn</td>
+        <td class="num">2</td>
+        <td><span class="badge badge-low">Sắp hết</span></td>
+    </tr>
+    <tr>
+        <td class="bold">NH02</td>
+        <td>Nhẫn vàng 18K đính đá Ruby</td>
+        <td>Nhẫn</td>
+        <td class="num">7</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">NH03</td>
+        <td>Nhẫn cưới trơn vàng 18K</td>
+        <td>Nhẫn</td>
+        <td class="num">14</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">NH04</td>
+        <td>Nhẫn vàng hồng 14K đính Sapphire</td>
+        <td>Nhẫn</td>
+        <td class="num">6</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">NH05</td>
+        <td>Nhẫn bạc 925 đính đá CZ</td>
+        <td>Nhẫn</td>
+        <td class="num">25</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">NH06</td>
+        <td>Nhẫn Emerald vàng 18K viền kim cương tấm</td>
+        <td>Nhẫn</td>
+        <td class="num">4</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">DC01</td>
+        <td>Dây chuyền vàng 18K mặt kim cương giọt nước</td>
+        <td>Dây chuyền</td>
+        <td class="num">5</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">DC02</td>
+        <td>Dây chuyền ngọc trai Akoya vàng trắng 14K</td>
+        <td>Dây chuyền</td>
+        <td class="num">6</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">DC03</td>
+        <td>Dây chuyền vàng hồng 14K mặt Sapphire</td>
+        <td>Dây chuyền</td>
+        <td class="num">9</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">DC04</td>
+        <td>Dây chuyền bạc 925 mặt trăng đính CZ</td>
+        <td>Dây chuyền</td>
+        <td class="num">30</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold">DC05</td>
+        <td>Dây chuyền vàng 24K kiểu Ý</td>
+        <td>Dây chuyền</td>
+        <td class="num">1</td>
+        <td><span class="badge badge-low">Sắp hết</span></td>
+    </tr>
+    <tr>
+        <td class="bold">DC06</td>
+        <td>Dây chuyền Ruby vàng trắng 18K</td>
+        <td>Dây chuyền</td>
+        <td class="num">5</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT01</td>
+        <td>Bông tai kim cương nụ vàng trắng 18K</td>
+        <td>Bông tai</td>
+        <td class="num">6</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT02</td>
+        <td>Bông tai ngọc trai nước ngọt bạc 925</td>
+        <td>Bông tai</td>
+        <td class="num">22</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT03</td>
+        <td>Bông tai vàng 18K giọt Ruby</td>
+        <td>Bông tai</td>
+        <td class="num">8</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT04</td>
+        <td>Bông tai vàng hồng 14K tròn Topaz</td>
+        <td>Bông tai</td>
+        <td class="num">10</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold">BT05</td>
+        <td>Bông tai Emerald vàng 18K dáng dài</td>
+        <td>Bông tai</td>
+        <td class="num">3</td>
+        <td><span class="badge badge-low">Sắp hết</span></td>
+    </tr>
+    <tr>
+        <td class="bold">BT06</td>
+        <td>Bông tai bạc 925 khoen tròn</td>
+        <td>Bông tai</td>
+        <td class="num">35</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr class="row-warning">
+        <td class="bold">VT01</td>
+        <td>Lắc tay Tennis vàng 18K đính kim cương tấm</td>
+        <td>Vòng tay</td>
+        <td class="num">2</td>
+        <td><span class="badge badge-low">Sắp hết</span></td>
+    </tr>
+    <tr>
+        <td class="bold">VT02</td>
+        <td>Vòng kiềng vàng 24K trơn</td>
+        <td>Vòng tay</td>
+        <td class="num">4</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">VT03</td>
+        <td>Lắc tay bạc 925 charm trái tim</td>
+        <td>Vòng tay</td>
+        <td class="num">18</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">VT04</td>
+        <td>Vòng tay vàng hồng 14K đính Sapphire</td>
+        <td>Vòng tay</td>
+        <td class="num">6</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">VT05</td>
+        <td>Lắc tay ngọc trai vàng trắng 14K</td>
+        <td>Vòng tay</td>
+        <td class="num">7</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+    <tr>
+        <td class="bold">VT06</td>
+        <td>Vòng tay Ruby vàng 18K</td>
+        <td>Vòng tay</td>
+        <td class="num">5</td>
+        <td><span class="muted">Còn hàng</span></td>
+    </tr>
+</table>
+    <p class="tv5-note">Dòng tô màu cam là sản phẩm sắp hết hàng (tồn ≤ 3).</p>
+</div>
+<p><a class="btn btn-outline" href="nhap-xuat-ton.html">Xem nhập – xuất – tồn của một sản phẩm</a></p>
+</div>
+
+</body>
+</html>

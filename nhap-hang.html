@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<title>Phiếu nhập hàng - Quản trị | AURELIA Jewelry</title>
+<meta name="description" content="AURELIA Jewelry - Website bán trang sức (đồ án Lập trình web và ứng dụng)" />
+<link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+</head>
+<body>
+<!-- PHỤ TRÁCH: TV5 — Admin: Nhập hàng, Giá bán, Đơn hàng, Tồn kho | Barem: I.5 - Hiển thị & tìm phiếu nhập -->
+
+<!-- ============ MENU QUẢN TRỊ (giống nhau ở mọi trang admin) ============ -->
+<div id="sidebar">
+    <a class="brand" href="index.html">
+        <span class="brand-name">AURELIA</span>
+        <span class="brand-sub">TRANG QUẢN TRỊ</span>
+    </a>
+    <div class="menu-title">Tổng quan</div>
+    <a href="index.html">Bảng điều khiển</a>
+    <div class="menu-title">Người dùng</div>
+    <a href="khach-hang.html">Khách hàng</a>
+    <div class="menu-title">Sản phẩm</div>
+    <a href="loai-san-pham.html">Loại sản phẩm</a>
+    <a href="san-pham.html">Danh mục sản phẩm</a>
+    <div class="menu-title">Kho &amp; giá</div>
+    <a href="nhap-hang.html" class="active">Phiếu nhập hàng</a>
+    <a href="gia-ban.html">Giá bán &amp; lợi nhuận</a>
+    <a href="ton-kho.html">Tồn kho</a>
+    <a href="nhap-xuat-ton.html">Nhập – xuất – tồn</a>
+    <div class="menu-title">Bán hàng</div>
+    <a href="don-hang.html">Đơn đặt hàng</a>
+    <div class="menu-title">Hệ thống</div>
+    <a href="dang-nhap.html">Đăng xuất</a>
+</div>
+
+<div id="admin-top">
+    <h1>Phiếu nhập hàng</h1>
+    <div class="admin-user">
+        Xin chào, <b>Quản trị viên</b> (admin)<span class="sep">|</span><a href="../index.html" target="_blank">Xem website</a><span class="sep">|</span><a href="dang-nhap.html">Đăng xuất</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- ============ HẾT MENU QUẢN TRỊ ============ -->
+
+<div id="admin-content">
+    <p class="admin-breadcrumb"><a href="index.html">Quản trị</a> / Phiếu nhập hàng</p>
+
+<form name="frmTimPhieu" action="nhap-hang-tim.html" method="get">
+<div class="filter-bar">
+    <div class="filter-item">
+        <div class="label">Mã phiếu</div>
+        <input type="text" name="ma" class="input w-150" value="" placeholder="VD: PN003" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Từ ngày</div>
+        <input type="text" name="tu" class="input w-150" value="" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-item">
+        <div class="label">Đến ngày</div>
+        <input type="text" name="den" class="input w-150" value="" placeholder="dd/mm/yyyy" />
+    </div>
+    <div class="filter-action">
+        <input type="submit" class="btn" value="Tìm" />
+        <a class="btn btn-outline" href="nhap-hang.html">Xóa lọc</a>
+    </div>
+    <div class="clear"></div>
+</div>
+</form>
+<div class="card">
+    <h2 class="card-title">Danh sách phiếu nhập hàng <span class="right"><a class="btn btn-small btn-gold" href="nhap-hang-them.html">+ Thêm phiếu nhập</a></span></h2>
+<table class="table" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Mã phiếu</th>
+        <th>Ngày nhập</th>
+        <th class="num">Số mặt hàng</th>
+        <th class="num">Tổng số lượng</th>
+        <th class="num">Tổng tiền</th>
+        <th>Trạng thái</th>
+        <th>Thao tác</th>
+    </tr>
+    <tr>
+        <td class="bold">PN001</td>
+        <td>05/09/2026</td>
+        <td class="num">5</td>
+        <td class="num">27</td>
+        <td class="num">257.700.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN002</td>
+        <td>20/09/2026</td>
+        <td class="num">5</td>
+        <td class="num">110</td>
+        <td class="num">58.700.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet-pn002.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN003</td>
+        <td>05/10/2026</td>
+        <td class="num">5</td>
+        <td class="num">26</td>
+        <td class="num">244.000.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet-pn003.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN004</td>
+        <td>18/10/2026</td>
+        <td class="num">5</td>
+        <td class="num">29</td>
+        <td class="num">219.300.000 ₫</td>
+        <td><span class="badge badge-done">Hoàn thành</span></td>
+        <td><a class="btn btn-small btn-outline" href="nhap-hang-chi-tiet-pn004.html">Xem</a></td>
+    </tr>
+    <tr>
+        <td class="bold">PN005</td>
+        <td>29/10/2026</td>
+        <td class="num">5</td>
+        <td class="num">24</td>
+        <td class="num">211.400.000 ₫</td>
+        <td><span class="badge badge-draft">Chưa hoàn thành</span></td>
+        <td><a class="btn btn-small btn-gold" href="nhap-hang-sua.html">Sửa</a></td>
+    </tr>
+</table>
+    <p class="tv5-note">Phiếu <b>đã hoàn thành</b> chỉ xem được; chỉ phiếu <b>chưa hoàn thành</b> mới có nút Sửa.</p>
+</div>
+</div>
+
+</body>
+</html>
